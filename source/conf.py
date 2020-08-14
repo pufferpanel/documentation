@@ -47,7 +47,9 @@ html_css_files = ['css/custom.css']
 html_logo = '_static/logo.png'
 html_favicon = '_static/favicon.png'
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+    'display_version': False,
+    'style_external_links': True
 }
 
 htmlhelp_basename = 'PufferPaneldoc'

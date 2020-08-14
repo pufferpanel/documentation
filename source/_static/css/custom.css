@@ -37,3 +37,7 @@ a, a:visited, a:active {
 a:hover {
   color: #46c2ff;
 }
+
+.sphinx-tab.tab :last-child {
+  margin-bottom: 1px;
+}
