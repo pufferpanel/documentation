@@ -30,3 +30,9 @@ PufferPanel - Open Source Game Server Management
    :caption: Game specific guides
 
    games/sourceds/autoupdate
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Release Notes
+
+   release-notes/2.1.0
