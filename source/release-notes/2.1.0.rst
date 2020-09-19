@@ -23,7 +23,7 @@ instead of 3. 5656 is no longer a port we will use. By default, we now only use 
 8080.
 
 Templates are now fully editable via the UI. This also means templates are stored with the panel, and are no longer stored on the nodes. You can 
-easily add templates through our UI, import templates from our `repository https://github.com/PufferPanel/templates`_, or even change templates to
+easily add templates through our UI, import templates from our `repository <https://github.com/PufferPanel/templates>`_, or even change templates to
 suit your needs.
 
 The UI has been overhauled to be more flexible. While we are still making changes to the UI, this new UI is designed to flow a bit better. You 
