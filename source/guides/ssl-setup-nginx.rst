@@ -66,20 +66,12 @@ First install certbot. This is the tool we will be using to obtain the certifica
 
 .. tabs::
 
-   .. tab:: Ubuntu 20.04/Debian 10/Debian 9
+   .. tab:: Ubuntu/Debian
 
       .. code-block:: bash
          
          sudo apt-get update
          sudo apt-get install certbot python-certbot-nginx
-
-   .. tab:: Ubuntu 18.04
-
-      .. code-block:: bash
-
-         sudo add-apt-repository ppa:certbot/certbot
-         sudo apt-get update
-         sudo apt-get install python-certbot-nginx
          
 Now run the certbot command. Replace panel.example.com with your own domain.
 
