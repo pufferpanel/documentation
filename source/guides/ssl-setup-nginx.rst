@@ -73,7 +73,7 @@ First install certbot. This is the tool we will be using to obtain the certifica
          sudo apt-get update
          sudo apt-get install certbot python-certbot-nginx
          
-Now run the certbot command. Replace panel.example.com with your own domain.
+Now run the certbot command. Replace panel.example.com with your own domain.  
 
 .. code-block:: bash
     sudo certbot --nginx -d panel.example.com
