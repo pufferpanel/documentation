@@ -24,11 +24,11 @@ First, let's install nginx.
 Now navigate to http://yourip. You should see a default nginx page.  
 
 Now set up an nginx virtual host. This will allow nginx to serve pufferpanel.
-Create and open a config file at /etc/nginx/sites-available/pufferpanel.conf
+Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf
 
 .. code-block:: bash
 
-    nano /etc/nginx/sites-available/pufferpanel.conf
+    nano /etc/nginx/sites-enabled/pufferpanel.conf
 
 Paste the following code to create a proxy. Make sure to change server_name to your panel's domain.
 .. code-block::
