@@ -76,6 +76,7 @@ First install certbot. This is the tool we will be using to obtain the certifica
 Now run the certbot command. Replace panel.example.com with your own domain.  
 
 .. code-block:: bash
+
     sudo certbot --nginx -d panel.example.com
     
 That's it! You can now access your panel via HTTPS.
