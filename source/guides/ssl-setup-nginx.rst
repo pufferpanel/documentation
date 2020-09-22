@@ -24,7 +24,7 @@ First, let's install nginx.
 Now navigate to http://yourip. You should see a default nginx page.  
 
 .. image:: https://www.nginx.com/wp-content/uploads/2014/01/welcome-screen-e1450116630667.png
-:alt: nginx default page
+    :alt: nginx default page
 
 Let's first set up an nginx virtual host. This will allow nginx to serve pufferpanel.
 Create and open a config file at /etc/nginx/sites-available/pufferpanel.conf
