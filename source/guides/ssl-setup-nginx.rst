@@ -23,14 +23,14 @@ First, let's install nginx.
          
 Now navigate to http://yourip. You should see a default nginx page.  
 
-Let's first set up an nginx virtual host. This will allow nginx to serve pufferpanel.
+Now set up an nginx virtual host. This will allow nginx to serve pufferpanel.
 Create and open a config file at /etc/nginx/sites-available/pufferpanel.conf
 
 .. code-block:: bash
 
     nano /etc/nginx/sites-available/pufferpanel.conf
 
-Now paste the following code. Make sure to change server_name to your panel's domain.
+Paste the following code to create a proxy. Make sure to change server_name to your panel's domain.
 .. code-block::
     server {
              listen 80;
@@ -56,7 +56,7 @@ Now paste the following code. Make sure to change server_name to your panel's do
          }
 
 Click CTRL+x to save, and then press Y and enter to confirm.
-Now restart nginx. You should be able to access pufferpanel at the domain you've choosen above.
+Restart nginx. You should be able to access pufferpanel at the domain you've choosen above.
 
 .. code-block:: bash
     systemctl restart nginx
@@ -86,4 +86,4 @@ Now run the certbot command. Replace panel.example.com with your own domain.
 .. code-block:: bash
     sudo certbot --nginx -d panel.example.com
     
-That's it! Now you can access your panel via HTTPS.
+That's it! You can now access your panel via HTTPS.
