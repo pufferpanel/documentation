@@ -9,7 +9,7 @@ The following ports are used by nginx. Please allow traffic to/from these ports.
 
 To set up SSL with let's encrypt you will also need a domain pointed to your panel's IP address.
 
-Setting up pufferpanel to be served over SSL is simple. We will use nginx and an Let's Encrypt certificate.  
+Setting up PufferPanel to be served over SSL is simple. We will use nginx and an Let's Encrypt certificate.  
 First, let's install nginx.
 
 .. tabs::
@@ -23,7 +23,7 @@ First, let's install nginx.
          
 Now navigate to http://yourip. You should see a default nginx page.  
 
-Now set up an nginx virtual host. This will allow nginx to serve pufferpanel.
+Now set up an nginx virtual host. This will allow nginx to serve PufferPanel.
 Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf
 
 .. code-block:: bash
@@ -56,7 +56,7 @@ Paste the following code to create a proxy. Make sure to change server_name to y
          }
 
 Click CTRL+x to save, and then press Y and enter to confirm.
-Restart nginx. You should be able to access pufferpanel at the domain you've choosen above.
+Restart nginx. You should be able to access PufferPanel at the domain you've choosen above.
 
 .. code-block:: bash
     systemctl restart nginx
