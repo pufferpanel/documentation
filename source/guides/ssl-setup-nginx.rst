@@ -52,6 +52,7 @@ Paste the following code to create a proxy. Make sure to change server_name to y
                  proxy_set_header Upgrade $http_upgrade;
                  proxy_set_header Connection "Upgrade";
                  proxy_set_header Host $host;
+                 client_max_body_size 100M;
              }
          }
 
@@ -71,7 +72,7 @@ First install certbot. This is the tool we will be using to obtain the certifica
       .. code-block:: bash
          
          sudo apt-get update
-         sudo apt-get install certbot python-certbot-nginx
+         sudo apt-get install certbot python3-certbot-nginx
          
 Now run the certbot command. Replace panel.example.com with your own domain.  
 
