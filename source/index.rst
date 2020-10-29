@@ -18,6 +18,7 @@ PufferPanel - Open Source Game Server Management
    guides/caddy
    guides/database
    guides/ssl-setup-nginx
+   guides/themes
 
 .. toctree::
    :maxdepth: 1
