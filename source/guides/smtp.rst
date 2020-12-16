@@ -38,11 +38,21 @@ Under "panel", add an email section. It should look like this:
    }
 
 Now, adjust the config options to your needs.  
-- provider - debug, SMTP, or mailgun.
-- from - the e-mail address the messages will be sent from
-- host - the IP address or domain name of the mail server, followed by the port
-- username
-- password
+
+provider
+  debug, SMTP, or mailgun.
+
+from
+  the e-mail address the messages will be sent from
+
+host
+  the IP address or domain name of the mail server, followed by the port
+
+username
+  the username to use when authenticating with the mail server
+
+password
+  the password to use when authenticating with the mail server
 
 Once you've set it up, restart PufferPanel.
 
@@ -50,4 +60,3 @@ Once you've set it up, restart PufferPanel.
 
   sudo systemctl restart pufferpanel
 Congratulations! You've successfully set up SMTP with PufferPanel.
-
