@@ -17,11 +17,13 @@ Open the config file located at `/etc/pufferpanel/config.json` using your favori
 It is recommended to use a tool such as https://jsonlint.com/ to make sure the syntax is correct.
 
 .. code-block:: bash
+
     sudo nano /etc/pufferpanel/config.json
 
 Under "panel", add an email section. It should look like this:
 
 .. code-block:: json
+
    {
      "panel": {
        ... other config options, make sure to add a comma
@@ -45,6 +47,7 @@ Now, adjust the config options to your needs.
 Once you've set it up, restart PufferPanel.
 
 .. code-block:: bash
+
   sudo systemctl restart pufferpanel
 Congratulations! You've successfully set up SMTP with PufferPanel.
 
