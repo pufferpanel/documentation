@@ -1,0 +1,14 @@
+v2.1.2 Release Notes
+====================
+
+v2.1.2 is a bugfix update to resolve several issues and 
+
+v2.1.1 Changelog
+^^^^^^^^^^^^
+- Add UI for creating users
+- Fix docker UI to show memory usage correctly
+- Docker containers will mount server files to /pufferpanel
+- Fix console permissions so users can no longer run commands without permission
+- Update console to support ANSI color codes
+- Fix bug where empty permissions would nuke stuff
+- Add swagger documentation (available at https://panelurl/swagger/index.html)
