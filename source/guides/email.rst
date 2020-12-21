@@ -36,6 +36,7 @@ Under "panel", add an email section. It should look like this: (dont include com
          "username": "someone@gmail.com",
          "password": "*******"
          ... If using mailgun
+         "provider": "mailgun",
          "key": "your_api_key"
        }
      }
