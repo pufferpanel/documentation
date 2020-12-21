@@ -1,4 +1,4 @@
-SMTP E-Mail setup
+E-Mail setup
 ================
 
 
@@ -7,11 +7,12 @@ PufferPanel has built-in e-mail support. This guide will show you how to set it 
 Prerequisites
 #############
 
-- An SMTP e-mail server
+- An SMTP e-mail server or a mailgun API key
 
 Setup
 #####
-In this guide, we will be using GMail as our e-mail server, but any will work.
+In this guide, we will be using GMail as our e-mail server, but any will work.  
+You can also use mailgun, which will only require an API key.  
 
 Open the config file located at `/etc/pufferpanel/config.json` using your favorite text editor.
 It is recommended to use a tool such as https://jsonlint.com/ to make sure the syntax is correct.
@@ -20,7 +21,7 @@ It is recommended to use a tool such as https://jsonlint.com/ to make sure the s
 
     sudo nano /etc/pufferpanel/config.json
 
-Under "panel", add an email section. It should look like this:
+Under "panel", add an email section. It should look like this: (dont include comments)  
 
 .. code-block:: json
 
@@ -28,11 +29,14 @@ Under "panel", add an email section. It should look like this:
      "panel": {
        ... other config options, make sure to add a comma
        "email": {
+         ... If using SMTP
          "provider": "smtp",
          "from": "someone@gmail.com",
          "host": "smtp.gmail.com:587",
          "username": "someone@gmail.com",
          "password": "*******"
+         ... If using mailgun
+         "key": "your_api_key"
        }
      }
    }
@@ -42,21 +46,24 @@ Now, adjust the config options to your needs.
 provider
   debug, SMTP, or mailgun.
 
+key
+  mailgun: API key
+
 from
-  the e-mail address the messages will be sent from
+  SMTP: the e-mail address the messages will be sent from
 
 host
-  the IP address or domain name of the mail server, followed by the port
+  SMTP: the IP address or domain name of the mail server, followed by the port
 
 username
-  the username to use when authenticating with the mail server
+  SMTP: the username to use when authenticating with the mail server
 
 password
-  the password to use when authenticating with the mail server
+  SMTP: the password to use when authenticating with the mail server
 
 Once you've set it up, restart PufferPanel.
 
 .. code-block:: bash
 
   sudo systemctl restart pufferpanel
-Congratulations! You've successfully set up SMTP with PufferPanel.
+Congratulations! You've successfully set up e-mails with PufferPanel.
