@@ -15,10 +15,82 @@ While a module may occur in the future, the current panel code is not suitable f
 Q: Where are my logs?
 ^^^^^^^^^^^^^^^^^^^^^
 
-PufferPanel stores all of their logs in /var/log/pufferpanel
+PufferPanel stores all of their logs in ``/var/log/pufferpanel``.
+
+
+Q: Where are the servers located?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PufferPanel stores all the servers in ``/var/lib/pufferpane/servers``.
 
 
 Q: Can I migrate from v1 to v2?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At this time, we do not have a migration path to v2. Due to the changing nature of v2, we do not want to have to deal with rewriting migrations if we have to make changes. Once v2 is more stable, we will have a migration tool to help move from v1 to v2.
+
+Q: How do I disable user registration?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PufferPanel does not support disabling user registration as users are unable to do anything without being assigned a server.
+
+If you still wish to disable registration, you can use a reverse proxy to deny access ``/auth/register`` endpoint.
+
+Q: How do I change the panel title?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You need to modify your ``config.json`` to include ``panel.settings.companyName``.
+
+I.E change the following from:
+
+.. code-block:: json
+    {
+      "logs": "/var/log/pufferpanel",
+      "panel": {
+        "database": {
+          "dialect": "sqlite3",
+          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
+        },
+        "web": {
+          "files": "/var/www/pufferpanel"
+        }
+      },
+      "token": {
+        "private": "private.pem"
+      },
+      "daemon": {
+        "data": {
+          "cache": "/var/lib/pufferpanel/cache",
+          "servers": "/var/lib/pufferpanel/servers"
+        }
+      }
+    }
+
+To:
+
+.. code-block:: json
+    {
+      "logs": "/var/log/pufferpanel",
+      "panel": {
+        "database": {
+          "dialect": "sqlite3",
+          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
+        },
+        "settings": {
+            "companyName": "YOUR NEW NAME HERE"
+        },
+        "web": {
+          "files": "/var/www/pufferpanel"
+        }
+      },
+      "token": {
+        "private": "private.pem"
+      },
+      "daemon": {
+        "data": {
+          "cache": "/var/lib/pufferpanel/cache",
+          "servers": "/var/lib/pufferpanel/servers"
+        }
+      }
+    }
+
