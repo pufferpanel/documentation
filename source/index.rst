@@ -19,6 +19,7 @@ PufferPanel - Open Source Game Server Management
    guides/database
    guides/ssl-setup-nginx
    guides/themes
+   guides/email
 
 .. toctree::
    :maxdepth: 1
