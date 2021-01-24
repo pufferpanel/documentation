@@ -21,7 +21,7 @@ PufferPanel stores all of their logs in ``/var/log/pufferpanel``.
 Q: Where are the servers located?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-PufferPanel stores all the servers in ``/var/lib/pufferpane/servers``.
+PufferPanel stores all the servers in ``/var/lib/pufferpanel/servers``.
 
 
 Q: Can I migrate from v1 to v2?
@@ -43,7 +43,8 @@ You need to modify your ``config.json`` to include ``panel.settings.companyName`
 
 I.E change the following from:
 
-.. code-block:: json
+.. code-block:: javascript
+
     {
       "logs": "/var/log/pufferpanel",
       "panel": {
@@ -68,7 +69,8 @@ I.E change the following from:
 
 To:
 
-.. code-block:: json
+.. code-block:: javascript
+
     {
       "logs": "/var/log/pufferpanel",
       "panel": {
