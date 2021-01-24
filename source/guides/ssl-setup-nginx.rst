@@ -83,6 +83,14 @@ Now run the certbot command. Replace panel.example.com with your own domain.
 Certbot will take care of redirecting http to https, renewing the certificates and will modify the config file to use SSL on port 443.  
 That's it! You can now access your panel via HTTPS.
 
+Your panel should now be accessed without appending port 8080 to the URL. Also your panel should be made to stop listening from the outside, by adding the following snippet in the top level of `config.json`, and restarting the panel. This way nginx wil be able to reach the panel without HTTPS, but the internet will not.
+
+.. code-block:: json
+
+    "web": {
+      "host": "127.0.0.1:8080"
+    }
+
 .. note::
 
-  Your panel should now be accessed without appending port 8080 to the URL.
+  There is also a `web` section inside the `panel` section - this `web` section goes at the same level as `panel`, not inside it.
