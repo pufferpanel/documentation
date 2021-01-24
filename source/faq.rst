@@ -43,7 +43,8 @@ You need to modify your ``config.json`` to include ``panel.settings.companyName`
 
 I.E change the following from:
 
-.. code-block:: json
+.. code-block:: javascript
+
     {
       "logs": "/var/log/pufferpanel",
       "panel": {
@@ -68,7 +69,8 @@ I.E change the following from:
 
 To:
 
-.. code-block:: json
+.. code-block:: javascript
+
     {
       "logs": "/var/log/pufferpanel",
       "panel": {
