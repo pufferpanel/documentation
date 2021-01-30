@@ -139,3 +139,5 @@ To:
       "host": "0.0.0.0:12000"
     }
   }
+
+After you have changed the port, restart PufferPanel on the Node.  Make sure to update the SFTP Port field in the panel with the new SFTP port for that node.
