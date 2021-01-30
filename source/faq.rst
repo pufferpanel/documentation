@@ -101,11 +101,9 @@ Q: How do I change the SFTP Port?
 
 In the ``config.json`` file, you need to change ``daemon.sftp.host`` to the port you require. Default is:``"host": "0.0.0.0:5657"``.
 
-.. warning ::
-
 PEASE NOTE: You cannot use ports 1-1024 as these are reserved and you will not be able to bind PufferPanel to them unless from root.
 
-i.e. From: 
+
 .. code-block:: javascript
 
   "daemon": {
