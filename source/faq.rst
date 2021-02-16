@@ -153,7 +153,7 @@ To:
       },
       "web": {
         "host": "YOUR_IP:YOUR_PORT"
-      }
+      },
       "token": {
         "private": "private.pem"
       },
