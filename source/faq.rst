@@ -96,3 +96,70 @@ To:
       }
     }
 
+Q: How do I change the ports that pufferpanel uses ? 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You need to modify your ``config.json`` to include 
+``web.host`` is daemon port (8080 by default) which is also the panel port which you want to access it or reverse proxy it via a web server
+``daemon.sftp.host`` is the sftp port (5657 by default) which is how you can upload/download files from the server
+
+I.E change the following from:
+
+.. code-block:: javascript
+
+    {
+      "logs": "/var/log/pufferpanel",
+      "panel": {
+        "database": {
+          "dialect": "sqlite3",
+          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
+        },
+        "settings": {
+            "companyName": "YOUR NEW NAME HERE"
+        },
+        "web": {
+          "files": "/var/www/pufferpanel"
+        }
+      },
+      "token": {
+        "private": "private.pem"
+      },
+      "daemon": {
+        "data": {
+          "cache": "/var/lib/pufferpanel/cache",
+          "servers": "/var/lib/pufferpanel/servers"
+        }
+      }
+    }
+
+To:
+
+.. code-block:: javascript
+
+    {
+      "logs": "/var/log/pufferpanel",
+      "panel": {
+        "database": {
+          "dialect": "sqlite3",
+          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
+        },
+        "web": {
+          "files": "/var/www/pufferpanel"
+        }
+      },
+      "web": {
+        "host": "YOUR_IP:YOUR_PORT"
+      }
+      "token": {
+        "private": "private.pem"
+      },
+      "daemon": {
+        "data": {
+          "cache": "/var/lib/pufferpanel/cache",
+          "servers": "/var/lib/pufferpanel/servers"
+        },
+        "sftp": {
+          "host": "YOUR_IP:YOUR_POST"
+        }
+      }
+    }
