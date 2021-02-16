@@ -163,7 +163,7 @@ To:
           "servers": "/var/lib/pufferpanel/servers"
         },
         "sftp": {
-          "host": "YOUR_IP:YOUR_POST"
+          "host": "YOUR_IP:YOUR_PORT"
         }
       }
     }
