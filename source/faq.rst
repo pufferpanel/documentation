@@ -100,8 +100,12 @@ Q: How do I change the ports that pufferpanel uses ?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You need to modify your ``config.json`` to include 
+
 ``web.host`` is daemon port (8080 by default) which is also the panel port which you want to access it or reverse proxy it via a web server
+
 ``daemon.sftp.host`` is the sftp port (5657 by default) which is how you can upload/download files from the server
+
+for more information refer config.go file in github
 
 I.E change the following from:
 
