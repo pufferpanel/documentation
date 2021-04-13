@@ -31,7 +31,7 @@ First, let's install nginx.
 Now navigate to http://yourip. You should see a default nginx page.  
 
 Now set up an nginx virtual host. This will allow nginx to serve PufferPanel.
-Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf or /etc/nginx/conf.d/ on CentOS
+Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf on Ubuntu/Debian or /etc/nginx/conf.d/pufferpanel.conf on CentOS
 
 .. tabs::
 
