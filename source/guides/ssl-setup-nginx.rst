@@ -25,8 +25,8 @@ First, let's install nginx.
 
       .. code-block:: bash
 
-         sudo yum install epel-release
-         sudo yum install nginx
+         sudo dnf install epel-release
+         sudo dnf install nginx
          
 Now navigate to http://yourip. You should see a default nginx page.  
 
