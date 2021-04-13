@@ -20,15 +20,33 @@ First, let's install nginx.
 
          sudo apt-get update
          sudo apt-get install nginx
+
+   .. tab:: CentOS
+
+      .. code-block:: bash
+
+         sudo yum install epel-release
+         sudo yum install nginx
          
 Now navigate to http://yourip. You should see a default nginx page.  
 
 Now set up an nginx virtual host. This will allow nginx to serve PufferPanel.
-Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf
+Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf or /etc/nginx/conf.d/ on CentOS
 
-.. code-block:: bash
+.. tabs::
 
-    nano /etc/nginx/sites-enabled/pufferpanel.conf
+   .. tab:: Ubuntu/Debian
+
+      .. code-block:: bash
+      
+         nano /etc/nginx/sites-enabled/pufferpanel.conf
+
+   .. tab:: CentOS
+
+      .. code-block:: bash
+
+         nano /etc/nginx/conf.d/pufferpanel.conf
+         
 
 Paste the following code to create a proxy. Make sure to change server_name to your panel's domain.
 .. code-block::
@@ -73,6 +91,12 @@ First install certbot. This is the tool we will be using to obtain the certifica
          
          sudo apt-get update
          sudo apt-get install certbot python3-certbot-nginx
+   
+   .. tab:: CentOS
+
+      .. code-block:: bash
+         sudo dnf install epel-release
+         sudo dnf install certbot python3-certbot-nginx
          
 Now run the certbot command. Replace panel.example.com with your own domain.  
 
