@@ -95,6 +95,7 @@ First install certbot. This is the tool we will be using to obtain the certifica
    .. tab:: CentOS
 
       .. code-block:: bash
+            
             sudo dnf install epel-release
             sudo dnf install certbot python3-certbot-nginx
          
