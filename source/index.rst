@@ -33,6 +33,8 @@ PufferPanel - Open Source Game Server Management
    :caption: Game specific guides
 
    games/sourceds/autoupdate
+   games/srcds/dependencies
+   games/mincraft/dependencies
 
 .. toctree::
    :maxdepth: 1
