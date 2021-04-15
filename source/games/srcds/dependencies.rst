@@ -1,5 +1,5 @@
-Dependencies
-============
+SRCDS Dependencies
+==================
 
 SRCDS requires additional dependencies that are not managed by PufferPanel, failing to install these may result in errors like:
 
