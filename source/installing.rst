@@ -69,6 +69,14 @@ Starting the panel
    systemctl start pufferpanel
 
 
+Autostart on server boot
+------------------
+
+.. code::
+
+   systemctl enable pufferpanel
+
+
 Done!
 -----
 
