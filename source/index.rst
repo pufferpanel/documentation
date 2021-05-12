@@ -8,6 +8,7 @@ PufferPanel - Open Source Game Server Management
    installing
    docker
    faq
+   featuretour
 
 .. toctree::
    :maxdepth: 1
