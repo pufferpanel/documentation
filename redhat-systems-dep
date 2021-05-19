@@ -1,0 +1,2 @@
+for steamcmd to work please install this for Redhat / Centos systems
+yum install libstdc++-4.8.5-44.el7.i686 glibc.i686 libstdc++.i686 -y
