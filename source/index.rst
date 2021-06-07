@@ -6,6 +6,7 @@ PufferPanel - Open Source Game Server Management
    :caption: Basics
 
    installing
+   installing-docker
    docker
    faq
    featuretour
