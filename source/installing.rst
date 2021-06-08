@@ -44,6 +44,10 @@ For easiest installation, if you have one of the listed suppored distributions, 
          curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo bash
          yum install pufferpanel
          systemctl enable pufferpanel
+         
+   .. tab:: Docker
+   
+      For Docker usage, please refer to `this page https://docs.pufferpanel.com/latest/installing-docker`_.
 
 The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
 
