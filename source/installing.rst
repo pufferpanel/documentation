@@ -47,7 +47,7 @@ For easiest installation, if you have one of the listed suppored distributions, 
          
    .. tab:: Docker
    
-      For Docker usage, please refer to `this page https://docs.pufferpanel.com/latest/installing-docker`_.
+      For Docker usage, please refer to :doc:`this page <installing-docker>`.
 
 The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
 
