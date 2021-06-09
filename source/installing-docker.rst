@@ -47,9 +47,9 @@ pufferpanel/pufferpanel:java
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This includes both Java 8 and Java 16 from OpenJDK. This lets you handle both pre-1.17 and 1.17+ Minecraft: Java Edition servers. 
-Java 8 is accessible by using $JAVA8_BIN as your Java command.
-Java 16 is accessible by using $JAVA16_BIN as your Java command.
-Java 8 is the default JRE if java is used. **This can and will change** as 1.17 moves forward.
+Java 8 is accessible by using java8 as your Java command with javac8 for the compiler.
+Java 16 is accessible by using java18 as your Java command with javac16 for the compiler.
+Java 16 is the default JRE if java is used.
 
 
 pufferpanel/pufferpanel:srcds
