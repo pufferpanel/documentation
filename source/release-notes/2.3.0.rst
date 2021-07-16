@@ -42,6 +42,6 @@ Knowing that, we have created a bunch of tags on our main image to help with thi
 This includes things like Java 8, Java 16, Git, and SRCDS dependencies. This means you can just pull the image and run it without any setup.
 This image is based on Ubuntu due to issues with SRCDS and Java intercompatibilty, so it is a large image. We are looking at resolving this in the future.
 
-2) All other images are based on Alpine, and contain specific dependencies if needed. You can see our full list of tags :doc:`here <installing-docker>`. 
+2) All other images are based on Alpine, and contain specific dependencies if needed. You can see our full list of tags :doc:`here <../installing-docker>`. 
 
-We recommend reading the page on installing using Docker :doc:`here <installing-docker>` if you want to use our Docker image. It has important notes on how to create and mount the volumes for keeping your data intact.
+We recommend reading the page on installing using Docker :doc:`here <../installing-docker>` if you want to use our Docker image. It has important notes on how to create and mount the volumes for keeping your data intact.
