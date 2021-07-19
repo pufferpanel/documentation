@@ -34,16 +34,16 @@ For easiest installation, if you have one of the listed suppored distributions, 
       .. code-block:: bash
 
          curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-         apt-get install pufferpanel
-         systemctl enable pufferpanel
+         sudo apt-get install pufferpanel
+         sudo systemctl enable pufferpanel
 
    .. tab:: CentOS
 
       .. code-block:: bash
 
          curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo bash
-         yum install pufferpanel
-         systemctl enable pufferpanel
+         sudo yum install pufferpanel
+         sudo systemctl enable pufferpanel
          
    .. tab:: Docker
    
