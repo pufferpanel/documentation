@@ -13,11 +13,7 @@ System Requirements
     PufferPanel comes out of the box with support for the following distributions:
 
     * Ubuntu 20.04
-    * Ubuntu 18.04
-    * Ubuntu 16.04
     * Debian 10
-    * Debian 9
-    * Debian 8
     * CentOS 7
     * Raspbian 10
 
