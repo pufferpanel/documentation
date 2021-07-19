@@ -6,6 +6,7 @@ PufferPanel - Open Source Game Server Management
    :caption: Basics
 
    installing
+   installing-docker
    docker
    faq
    featuretour
@@ -41,6 +42,7 @@ PufferPanel - Open Source Game Server Management
    :maxdepth: 1
    :caption: Release Notes
 
+   release-notes/2.3.0
    release-notes/2.2.0
    release-notes/2.1.2
    release-notes/2.1.1
