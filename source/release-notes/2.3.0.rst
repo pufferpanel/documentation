@@ -45,3 +45,11 @@ This image is based on Ubuntu due to issues with SRCDS and Java intercompatibilt
 2) All other images are based on Alpine, and contain specific dependencies if needed. You can see our full list of tags :doc:`here <../installing-docker>`. 
 
 We recommend reading the page on installing using Docker :doc:`here <../installing-docker>` if you want to use our Docker image. It has important notes on how to create and mount the volumes for keeping your data intact.
+
+
+Known Issues
+^^^^^^^^^^^^
+
+- The "Reload Server Definition From Disk" button will fail with an error.
+- Deleting variables from the server editor does not work.
+- Errors will be seen when not all permissions are given to a server. This is only an UI issue, and can be ignored.
