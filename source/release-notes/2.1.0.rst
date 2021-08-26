@@ -71,7 +71,7 @@ The following is a list of issues and/or limitations of v2.1.0
 - Email support does not work. While there is some built-in work to get this working, it is currently not enabled.
 
 Website/Documentation
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 As you can tell, we have changed our documentation and website. We were not happy with our previous documentation software, as it failed to indicate
 when requests for changes were made, and was not very intuitive. We have changed to ReadTheDocs as our documentation provider, and you can contribute

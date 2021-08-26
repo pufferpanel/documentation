@@ -8,7 +8,7 @@ This change also changes how packages are built. We used to use FPM to handle bu
 As always, if there are issues, please let us know.
 
 v2.2.0 Changelog
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 - Docker environments will now mount server files to the /pufferpanel directory
 - Improvements to the template and server creation UIs

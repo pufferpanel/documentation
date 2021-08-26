@@ -4,7 +4,7 @@ v2.1.1 Release Notes
 v2.1.1 is a small bugfix to resolve an issue with the file manager when editing JSON files, and adding support for SMTP email. Do note that a lot of emails are not built-in yet, but you should be able to now configure any email provider. This also adds arm64 as a pre-built binary.
 
 v2.1.1 Changelog
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 - Fix issue in File Manager where JSON files were being saved as [object Object] instead of the actual contents
 - Add SMTP email support with following options:
 

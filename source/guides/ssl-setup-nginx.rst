@@ -50,6 +50,7 @@ Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf on Ub
 
 Paste the following code to create a proxy. Make sure to change server_name to your panel's domain.
 .. code-block::
+
     server {
              listen 80;
              root /var/www/pufferpanel;
@@ -78,6 +79,7 @@ Click CTRL+x to save, and then press Y and enter to confirm.
 Restart nginx. You should be able to access PufferPanel at the domain you've choosen above.
 
 .. code-block:: bash
+
     systemctl restart nginx
 
 Now that nginx is running, let's set up SSL.

@@ -67,4 +67,5 @@ Once you've set it up, restart PufferPanel.
 .. code-block:: bash
 
   sudo systemctl restart pufferpanel
+
 Congratulations! You've successfully set up e-mails with PufferPanel.

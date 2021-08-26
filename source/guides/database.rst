@@ -50,7 +50,7 @@ PostgresSQL
   }
   
 Microsoft SQL Server
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: JSON
 
