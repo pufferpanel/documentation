@@ -76,5 +76,5 @@ And that's it! Your panel is now available on port 8080 of your server.
 
 Additional resources:
 
-* Enabling SSL (TODO)
+* :doc:`Enabling SSL <guides/ssl-setup-nginx>`
 * Using a database instead of file-backed storage (TODO)
