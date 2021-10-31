@@ -45,7 +45,7 @@ System Requirements
 Installing
 ----------
 
-For easiest installation, if you have one of the listed suppored distributions, you con simply install our package and get going!
+For easiest installation, if you have one of the listed supported distributions, you con simply install our package and get going!
 
 .. tabs::
 
