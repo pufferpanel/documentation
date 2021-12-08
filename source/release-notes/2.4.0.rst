@@ -2,7 +2,7 @@ v2.4.0 Changelog
 ^^^^^^^^^^^^^^^^
 
 - Add OAuth 2 screens to both accounts and servers. This allows for creating clients which can talk to the API. This is the preferred method over using the older undocumented and unsupported method of using /auth/login.
-- Add hoey keys for accessing UI options
+- Add hotkeys for accessing UI options
 - Wire up additional emails to events
 - Microsoft SQL Server can be used with Linux installations
 - Attempt to resolve performance issues with the console
