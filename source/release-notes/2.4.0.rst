@@ -1,5 +1,5 @@
 v2.4.0 Changelog
-^^^^^^^^^^^^^^^^
+================
 
 - Add OAuth 2 screens to both accounts and servers. This allows for creating clients which can talk to the API. This is the preferred method over using the older undocumented and unsupported method of using /auth/login.
 - Add hotkeys for accessing UI options
@@ -15,7 +15,7 @@ v2.4.0 Changelog
 - Fix exposed ports not being applied when port bindings are used
 
 Windows Installer
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 We now have an official Windows installer which will install a PufferPanel service to Windows. This installer is supported on Windows Server 2012+.
 As a warning, we DO NOT RECOMMEND USING THE LOCAL SERVICE ACOUNT. You will want to create a PufferPanel user on your server and use this to run the service.
