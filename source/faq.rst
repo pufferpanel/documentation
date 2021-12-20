@@ -32,67 +32,9 @@ At this time, we do not have a migration path to v2. Due to the changing nature 
 Q: How do I disable user registration?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-PufferPanel does not support disabling user registration as users are unable to do anything without being assigned a server.
-
-If you still wish to disable registration, you can use a reverse proxy to deny access ``/auth/register`` endpoint.
+Log into you PufferPanel installation with an admin account and navigate to the ``Settings`` page from the sidebar, there you'll find a checkbox ``Allow users to register themselves``, untick that and hit ``Save`` and the registration link will not be shown on the login page anymore and attempts to register for example using the API will now always fail.
 
 Q: How do I change the panel title?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You need to modify your ``config.json`` to include ``panel.settings.companyName``.
-
-I.E change the following from:
-
-.. code-block:: javascript
-
-    {
-      "logs": "/var/log/pufferpanel",
-      "panel": {
-        "database": {
-          "dialect": "sqlite3",
-          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
-        },
-        "web": {
-          "files": "/var/www/pufferpanel"
-        }
-      },
-      "token": {
-        "private": "private.pem"
-      },
-      "daemon": {
-        "data": {
-          "cache": "/var/lib/pufferpanel/cache",
-          "servers": "/var/lib/pufferpanel/servers"
-        }
-      }
-    }
-
-To:
-
-.. code-block:: javascript
-
-    {
-      "logs": "/var/log/pufferpanel",
-      "panel": {
-        "database": {
-          "dialect": "sqlite3",
-          "url": "file:/var/lib/pufferpanel/database.db?cache=shared"
-        },
-        "settings": {
-            "companyName": "YOUR NEW NAME HERE"
-        },
-        "web": {
-          "files": "/var/www/pufferpanel"
-        }
-      },
-      "token": {
-        "private": "private.pem"
-      },
-      "daemon": {
-        "data": {
-          "cache": "/var/lib/pufferpanel/cache",
-          "servers": "/var/lib/pufferpanel/servers"
-        }
-      }
-    }
-
+Log into you PufferPanel installation with an admin account and navigate to the ``Settings`` page from the sidebar, there you'll find a text field ``Company Name``, change that and hit ``Save`` and the panel title will be updated.
