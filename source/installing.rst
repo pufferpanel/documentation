@@ -90,7 +90,7 @@ To create your first user, run the following command. Be sure to enter "Y" when 
 
 .. code::
 
-   pufferpanel user add
+   $ sudo pufferpanel user add
 
 
 Starting the panel
@@ -98,8 +98,13 @@ Starting the panel
 
 .. code::
 
-   systemctl start pufferpanel
+   $ sudo systemctl enable --now pufferpanel
 
+--------------------
+Managing the service
+--------------------
+
+PufferPanel uses Systemd to manage the service, consult the man page `man systemctl` or `a guide <https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units>`_ for instructions on how to use it.
 
 Done!
 -----
