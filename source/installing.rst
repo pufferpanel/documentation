@@ -58,8 +58,11 @@ For easiest installation, if you have one of the listed supported distributions,
          sudo systemctl enable pufferpanel
          
       .. note::
-         If the Version you are wanting to install PufferPanel on is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
-         :code:`curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=focal bash`
+         However not recommnended, it is possible to install PufferPanel on other Debian based OS or versions not listed in the table above.
+         For a version that is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+         .. code-block:: bash
+         
+            curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=focal bash
 
    .. tab:: CentOS
 
@@ -70,8 +73,11 @@ For easiest installation, if you have one of the listed supported distributions,
          sudo systemctl enable pufferpanel
          
       .. note::
-         If the Version you are wanting to install PufferPanel on is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
-         :code:`curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo os=el dist=8 bash`
+         However not recommnended, it is possible to install PufferPanel on other Red Hat based OS or versions not listed in the table above.
+         For a version that is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+         .. code-block:: bash
+         
+            curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo os=el dist=8 bash
          
    .. tab:: Docker
    
