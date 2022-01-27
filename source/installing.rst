@@ -9,41 +9,37 @@ System Requirements
 * SSH access and administrative (root or sudo) privileges on the server
 * One of the following operating systems:
 
-+-----------------------+-------+----------------+------------------+
-| OS/Version            | AMD64 | ARM            | Included in Repo |
-+=======================+=======+================+==================+
-| Centos 7              | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Centos 8              | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Fedora 33             | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Bionic (18.04) | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Cosmic (18.10) | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Disco (19.04)  | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Eoan (19.10)   | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Focal (20.04)  | Yes   | ARM64 Only     | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Groovy (20.10) | Yes   | ARM64 Only     | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Hirsute (21.04)| Yes   | ARM64 Only     | No               |
-+-----------------------+-------+----------------+------------------+
-| Ubuntu Indri (21.10)  | Yes   | ARM64 Only     | No               |
-+-----------------------+-------+----------------+------------------+
-| Debian Jessie (8)     | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Debian Stretch (9)    | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Debian Buster (10)    | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Debian Bullseye (11)  | Yes   | No             | Yes              |
-+-----------------------+-------+----------------+------------------+
-| Raspbian Buster (10)  | No    | ARM64 & ARM32  | Yes              |
-+-----------------------+-------+----------------+------------------+
++-----------------------+-------+----------------+
+| OS/Version            | AMD64 | ARM            |
++=======================+=======+================+
+| Centos 7              | Yes   | No             |
++-----------------------+-------+----------------+
+| Centos 8              | Yes   | No             |
++-----------------------+-------+----------------+
+| Fedora 33             | Yes   | No             |
++-----------------------+-------+----------------+
+| Ubuntu Bionic (18.04) | Yes   | No             |
++-----------------------+-------+----------------+
+| Ubuntu Cosmic (18.10) | Yes   | No             |
++-----------------------+-------+----------------+
+| Ubuntu Disco (19.04)  | Yes   | No             |
++-----------------------+-------+----------------+
+| Ubuntu Eoan (19.10)   | Yes   | No             |
++-----------------------+-------+----------------+
+| Ubuntu Focal (20.04)  | Yes   | ARM64 Only     |
++-----------------------+-------+----------------+
+| Ubuntu Groovy (20.10) | Yes   | ARM64 Only     |
++-----------------------+-------+----------------+
+| Debian Jessie (8)     | Yes   | No             |
++-----------------------+-------+----------------+
+| Debian Stretch (9)    | Yes   | No             |
++-----------------------+-------+----------------+
+| Debian Buster (10)    | Yes   | No             |
++-----------------------+-------+----------------+
+| Debian Bullseye (11)  | Yes   | No             |
++-----------------------+-------+----------------+
+| Raspbian Buster (10)  | No    | ARM64 & ARM32  |
++-----------------------+-------+----------------+
 
 
 Installing
@@ -62,7 +58,7 @@ For easiest installation, if you have one of the listed supported distributions,
          sudo systemctl enable pufferpanel
          
       .. note::
-         If the OS/Version you are wanting to install PufferPanel on is not included in the PackageCloud repository, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+         If the Version you are wanting to install PufferPanel on is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
          :code:`curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=focal bash`
 
    .. tab:: CentOS
@@ -74,7 +70,7 @@ For easiest installation, if you have one of the listed supported distributions,
          sudo systemctl enable pufferpanel
          
       .. note::
-         If the OS/Version you are wanting to install PufferPanel on is not included in the PackageCloud repository, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+         If the Version you are wanting to install PufferPanel on is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
          :code:`curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo os=el dist=8 bash`
          
    .. tab:: Docker
