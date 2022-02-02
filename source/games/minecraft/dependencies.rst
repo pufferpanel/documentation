@@ -24,3 +24,11 @@ Minecraft requires additional dependencies that are not managed by PufferPanel, 
 To resolve this please install JDK/JRE required for your Mincraft version.
 
 You can see what version of Java you have installed by running `java -version`.
+
+
+Multiple Java Versions
+^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to run multiple Minecraft servers that require different Java versions you can just install all needed Java versions on your system and use the ``path to java executable`` field available on most Minecraft templates to specify which Java version that server should use
+
+On most systems installed Java versions are found in ``/usr/lib/jvm`` and the executable for a specific version is usually located in its installation directory as ``bin/java``, so if you're using OpenJDK 11 and OpenJDK 16 the executables may for example be found at ``/usr/lib/jvm/openjdk-11-amd64/bin/java`` and ``/usr/lib/jvm/openjdk-16-amd64/bin/java`` respectively
