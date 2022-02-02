@@ -38,3 +38,12 @@ Q: How do I change the panel title?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Log into you PufferPanel installation with an admin account and navigate to the ``Settings`` page from the sidebar, there you'll find a text field ``Company Name``, change that and hit ``Save`` and the panel title will be updated.
+
+Q: How do I run a bot/are there templates for bots?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PufferPanel works as an abstraction over the host OS so, it supports everything the host OS does.
+
+Generic templates for "X" bot/bot library don't exist, each project works differently. There is no generic way to cover them.
+
+You'll need to create a template for them yourself, this is quite straight forward and there are plenty of  `example templates <https://github.com/PufferPanel/templates/>`_ to work from.
