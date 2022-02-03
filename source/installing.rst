@@ -78,7 +78,7 @@ Unsupported OS/Version
    This is not recommended or supported. If it breaks, you're on your own!
    
 It is possible to install PufferPanel on other Debian or Red Hat based OS/Versions not listed in the table above.
-For a OS/Version that is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+For a OS/Version that is not included in the table above, you will need to add :code:`os={os} dist={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
 
 .. code-block:: bash
          
