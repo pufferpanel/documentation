@@ -79,6 +79,7 @@ Unsupported OS/Version
    
 It is possible to install PufferPanel on other Debian or Red Hat based OS/Versions not listed in the table above.
 For a OS/Version that is not included in the table above, you will need to add :code:`os={os} distro={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
+
 .. code-block:: bash
          
    curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=focal bash
