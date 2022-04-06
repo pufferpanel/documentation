@@ -46,7 +46,7 @@ PostgresSQL
   {
     "panel": {
       "database": {
-        "dialect": "postgres",
+        "dialect": "postgresql",
         "url": "user=pufferpanel password=pufferpanel dbname=pufferpanel port=9920 sslmode=disable"
       }
     }
