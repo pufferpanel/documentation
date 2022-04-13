@@ -48,7 +48,8 @@ Create and open a config file at /etc/nginx/sites-enabled/pufferpanel.conf on Ub
          nano /etc/nginx/conf.d/pufferpanel.conf
          
 
-Paste the following code to create a proxy. Make sure to change server_name to your panel's domain.
+Paste the following code to create a proxy. Make sure to change the server name (``panel.examplehost.com``) to your panel's domain.
+
 .. code-block::
 
     server {
