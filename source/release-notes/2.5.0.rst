@@ -10,6 +10,6 @@ v2.5.0 Changelog
 - Add warning that templates are created by the community
 - Enforce server shutdown on host shutdown
 - Fix config loader to wait for current directory to be set
-- Add Ubunty/Jammy as supported
+- Add Ubuntu/Jammy as supported
 - Disable GIN debug messages
 - Fix error reporting to front-end when creating servers
