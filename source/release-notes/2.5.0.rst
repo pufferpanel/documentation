@@ -1,0 +1,15 @@
+v2.5.0 Changelog
+================
+
+- Clean up database logger so errors are not shown incorrectly to users
+- Add server requirements when creating servers
+- Fix Docker images to contain swagger documentation
+- Return expires_in with OAuth2 tokens
+- Fix SFTP when user has 2FA enabled
+- Allow IPv6 host parsing
+- Add warning that templates are created by the community
+- Enforce server shutdown on host shutdown
+- Fix config loader to wait for current directory to be set
+- Add Ubunty/Jammy as supported
+- Disable GIN debug messages
+- Fix error reporting to front-end when creating servers
