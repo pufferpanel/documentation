@@ -1,0 +1,6 @@
+v2.5.1 Changelog
+================
+
+- Resolve security issue related with symlinks
+- Attempt to resolve mobile view losing header on pages
+- Resolve issue where session timeouts were not being detected correctly
