@@ -21,7 +21,7 @@ Minecraft requires additional dependencies that are not managed by PufferPanel, 
 	[DAEMON] exec: "java": executable file not found in $PATH
 	[DAEMON] Starting server
  
-To resolve this please install JDK/JRE required for your Mincraft version.
+To resolve this please install JDK/JRE required for your Minecraft version.
 
 You can see what version of Java you have installed by running `java -version`.
 
