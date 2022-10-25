@@ -1,0 +1,8 @@
+v2.5.2 Changelog
+================
+
+Bug Fixes
+
+- Fix newlines not applying from daemon messages to the console
+- Fix expiresIn value on OAuth token responses
+-  Fix SFTP logins on long-running nodes
