@@ -17,7 +17,8 @@ Using Themes
 Creating Themes
 ---------------
 
-As mentioned in the previous section, every theme consists of one ``.tar`` file, the name of this file is also the name of the theme as displayed on the panel
+| As mentioned in the previous section, every theme consists of one ``.tar`` file, the name of this file is also the name of the theme as displayed on the panel
+This ``.tar`` file can be created with the command ``tar -cf <theme name>.tar theme.json theme.css [...]``
 
 A theme always needs to contain a ``theme.json`` file, in this file you'll specify the color schemes of your theme for both light and dark mode
 
