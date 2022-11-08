@@ -1,3 +1,6 @@
+Template Definitions
+====================
+
 How to add a new template
 -------------------------
 
