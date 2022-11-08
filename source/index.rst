@@ -9,7 +9,7 @@ PufferPanel - Open Source Game Server Management
    installing-docker
    docker
    faq
-   featuretour
+   featuretour   
 
 .. toctree::
    :maxdepth: 1
@@ -22,6 +22,7 @@ PufferPanel - Open Source Game Server Management
    guides/ssl-setup-nginx
    guides/themes
    guides/email
+   templates/templates
    guides/contributing
    guides/import-minecraft-server
 
