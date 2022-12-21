@@ -1,0 +1,66 @@
+v2.6.0
+======
+
+v2.6.0 is a larger change than the previous releases. The biggest things to note with this release
+are the changes made to the local node structure and the additional of operators to handle Downloading
+Java and SteamCMD. This attempts to help get servers up and running faster than before.
+
+This does mean that templates were broken up and are no longer shared between environments. Templates
+are now a bit more specific to run in Docker or not. This means our Java-based servers are ran using
+the Eclipse JVM and are included with their own templates. Java-based servers not in Docker will download
+the JVM at installation time, so that it is not needed on the host machine anymore.
+
+Templates as a whole were pruned of defective/one-off templates, and should now all work.
+
+SteamCMD likewise will use a SteamCMD container if Docker is used, which handles the dependencies that
+are associated with it. This is the better method to use SteamCMD, as it's a mess to run on a host machine.
+If needed, doing it without Docker is supported, and uses the DepotDownloader to handle downloading the game
+servers instead. This means SteamCMD is not required anymore, but may still be needed for certain game servers.
+
+Local nodes are now fully locked out of the UI from editing, and require setting values in the config to apply
+changes. This mainly will be the "Master URL" as the node's IP.
+
+Breaking Changes
+^^^^^^^^^^^^^^^^
+
+While we attempted to avoid breaking changes in this release, we had to make the call to do so.
+
+Ubuntu verisons prior to 20.04 will not support v2.6.0 and onwards. Due to the end of life of these versions coming
+up and our build pipelines already deprecating these versions, we made the call to cut off support for these versions.
+We recommend updating to Ubuntu 20.04 or later to get continued updates.
+
+Non-Ubuntu LTS versions are no longer going to be deployed to our main repo. This is mainly due to the contantly
+changing nature of this process and how many variants there can be. Users on Focal or Jammy (20.04 or 22.04) are
+safe, but all other Ubuntu versions are impacted. It is recommended to change your sources.list file to use the 
+jammy repo to get future updates.
+
+Arm builds are likewise also receiving a cut-off. Anything prior to ARMv8 (older than a Pi 3) or ARMHF will no longer 
+have builds available for the same reasons above.
+
+Binary Folder
+^^^^^^^^^^^^^
+
+PufferPanel now supports the usage of a "binaries" folder which can be used to install binaries that servers may need
+to run their processes. Any binary added to this folder is automatically included in the PATH for a server, and is accessible
+by both the panel and the servers. The new javadl and steamgamedl operators use this folder to store binaries that are used,
+and others may be installed here as well.
+
+javadl
+^^^^^^
+
+The new javadl operator allows for downloading of Java JVMs for servers to use. This supports the parameter `version` which 
+accepts a major Java version supported by `Eclipse Temurin(tm) <https://adoptium.net/temurin/releases/>`_. 
+
+Versions are saved into the new binaries folder, and are suffixed with the version of Java to assist with concurrent versions.
+
+i.e Java 8 is accessible with java8, while Java 17 is accessible with java17
+
+steamgamedl
+^^^^^^^^^^^
+
+The new steamgamedl operator allows for downloading any Steam game from Steam's servers and installed into your server without
+the need for SteamCMD to be involved. This accepts the appId for the game to perform the download, and runs using 
+`DepotDownloader <https://github.com/SteamRE/DepotDownloader>`_.
+
+While some games may still have a hard requirement for SteamCMD, we found this works better for both a maintenance usage and 
+an installation standpoint.

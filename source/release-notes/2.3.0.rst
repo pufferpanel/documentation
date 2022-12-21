@@ -1,5 +1,5 @@
-v2.3.0 Release Notes
-====================
+v2.3.0
+======
 
 This release includes a bunch of quality of life changes and bugs fixes, so let's get down to it.
 The biggest UI change is the server page has been redesigned to use tabs instead of a giant page to navigate. This makes for a cleaner look, while making it easier to tell what you are looking at. This also means we can add more information in the future without making the page worse.
@@ -8,8 +8,8 @@ Our Docker images have been redone from the ground up. I will suggest reading th
 
 As always, if there are issues, please let us know.
 
-v2.3.0 Changelog
-^^^^^^^^^^^^^^^^
+Changelog
+^^^^^^^^^
 
 - Archive/Extract files and folders from the web file manager
 - File type indicating icons on the web file manager for various file formats

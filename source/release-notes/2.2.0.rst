@@ -1,5 +1,5 @@
-v2.2.0 Release Notes
-====================
+v2.2.0
+======
 
 This release is a feature update, adding a few quality of life features. The main change is that TTY will now be the default environment on Linux systems.
 This means that for most servers, there will be no change. If there is issues with servers running after this release that ran using 2.1.1, please let us know.
@@ -7,8 +7,8 @@ This change also changes how packages are built. We used to use FPM to handle bu
 
 As always, if there are issues, please let us know.
 
-v2.2.0 Changelog
-^^^^^^^^^^^^^^^^
+Changelog
+^^^^^^^^^
 
 - Docker environments will now mount server files to the /pufferpanel directory
 - Improvements to the template and server creation UIs

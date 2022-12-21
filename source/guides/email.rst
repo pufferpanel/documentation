@@ -27,15 +27,12 @@ Under "panel", add an email section. It should look like this: (dont include com
 
    {
      "panel": {
-       ... other config options, make sure to add a comma
        "email": {
-         ... If using SMTP
          "provider": "smtp",
          "from": "someone@gmail.com",
          "host": "smtp.gmail.com:587",
          "username": "someone@gmail.com",
          "password": "*******"
-         ... If using mailgun
          "provider": "mailgun",
          "key": "your_api_key"
        }

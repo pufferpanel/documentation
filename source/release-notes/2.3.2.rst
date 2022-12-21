@@ -1,5 +1,5 @@
-v2.3.2 Changelog
-^^^^^^^^^^^^^^^^
+v2.3.2
+======
 
 - Fix local node addition causing errors when changing it's name
 - Add flag to disable registrations (panel.registrationEnabled)

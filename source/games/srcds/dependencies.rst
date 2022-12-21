@@ -3,7 +3,7 @@ SRCDS Dependencies
 
 SRCDS requires additional dependencies that are not managed by PufferPanel, failing to install these may result in errors like:
 
-.. code-block:: bash
+.. code-block::
 
 	[DAEMON] Allocating server
 	[DAEMON] Server allocated

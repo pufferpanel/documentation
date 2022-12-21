@@ -9,41 +9,21 @@ System Requirements
 * SSH access and administrative (root or sudo) privileges on the server
 * One of the following operating systems:
 
-+-------------------------+-------+----------------+
-| OS/Version              | AMD64 | ARM            |
-+=========================+=======+================+
-| Centos 7                | Yes   | No             |
-+-------------------------+-------+----------------+
-| Centos 8                | Yes   | No             |
-+-------------------------+-------+----------------+
-| Fedora 33               | Yes   | No             |
-+-------------------------+-------+----------------+
-| Ubuntu Bionic (18.04)   | Yes   | No             |
-+-------------------------+-------+----------------+
-| Ubuntu Cosmic (18.10)   | Yes   | No             |
-+-------------------------+-------+----------------+
-| Ubuntu Disco (19.04)    | Yes   | No             |
-+-------------------------+-------+----------------+
-| Ubuntu Eoan (19.10)     | Yes   | No             |
-+-------------------------+-------+----------------+
-| Ubuntu Focal (20.04)    | Yes   | ARM64 Only     |
-+-------------------------+-------+----------------+
-| Ubuntu Groovy (20.10)   | Yes   | ARM64 Only     |
-+-------------------------+-------+----------------+
-| Ubuntu Jammy (22.04)    | Yes   | ARM64 Only     |
-+-------------------------+-------+----------------+
-| Debian Jessie (8)       | Yes   | No             |
-+-------------------------+-------+----------------+
-| Debian Stretch (9)      | Yes   | No             |
-+-------------------------+-------+----------------+
-| Debian Buster (10)      | Yes   | No             |
-+-------------------------+-------+----------------+
-| Debian Bullseye (11)    | Yes   | No             |
-+-------------------------+-------+----------------+
-| Raspbian Buster (10)    | No    | ARM64 & ARM32  |
-+-------------------------+-------+----------------+
-| Raspbian Bullseye (11)  | No    | ARM64 & ARM32  |
-+-------------------------+-------+----------------+
++------------------------+-------+-------+-------+
+| OS/Version             | AMD64 | ARM64 | AMD32 |
++========================+=======+=======+=======+
+| Ubuntu Focal (20.04)   | Yes   | Yes   | No    |
++------------------------+-------+-------+-------+
+| Ubuntu Jammy (22.04)   | Yes   | Yes   | No    |
++------------------------+-------+-------+-------+
+| Debian Buster (10)     | Yes   | Yes   | No    |
++------------------------+-------+-------+-------+
+| Debian Bullseye (11)   | Yes   | Yes   | No    |
++------------------------+-------+-------+-------+
+| Raspbian Buster (10)   | No    | Yes   | Yes   |
++------------------------+-------+-------+-------+
+| Raspbian Bullseye (11) | No    | Yes   | Yes   |
++------------------------+-------+-------+-------+
 
 
 Installing
@@ -57,19 +37,9 @@ For easiest installation, if you have one of the listed supported distributions,
 
       .. code-block:: bash
 
-         curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-         sudo apt-get install pufferpanel
-         sudo systemctl enable pufferpanel
-         
-
-   .. tab:: CentOS
-
-      .. code-block:: bash
-
-         curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo bash
-         sudo yum install pufferpanel
-         sudo systemctl enable pufferpanel
-         
+         $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
+         $ sudo apt-get install pufferpanel
+         $ sudo systemctl enable pufferpanel         
          
    .. tab:: Docker
    
@@ -78,16 +48,23 @@ For easiest installation, if you have one of the listed supported distributions,
 
 Unsupported OS/Version
 ----------------------
-.. warn::
+.. warning::
    This is not recommended or supported. If it breaks, you're on your own!
    
 It is possible to install PufferPanel on other Debian or Red Hat based OS/Versions not listed in the table above.
 For a OS/Version that is not included in the table above, you will need to add :code:`os={os} dist={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
 
-.. code-block:: bash
+.. tabs::
+
+   .. tab:: DEB
+
+      .. code-block:: bash
+
+         $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
          
-   curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=focal bash
-           
+   .. tab:: RPM
+
+      Installs using RPM files are a manual process. Refer to the `latest release <https://github.com/PufferPanel/PufferPanel/releases>`_ to get the RPM file.
 
 Ports
 -----
@@ -103,7 +80,7 @@ Adding an admin
 
 To create your first user, run the following command. Be sure to enter "Y" when it asks if this is an admin so you can fully use your panel.
 
-.. code::
+.. code:: bash
 
    $ sudo pufferpanel user add
 
@@ -111,7 +88,7 @@ To create your first user, run the following command. Be sure to enter "Y" when 
 Starting the panel
 ------------------
 
-.. code::
+.. code:: bash
 
    $ sudo systemctl enable --now pufferpanel
 
@@ -128,5 +105,4 @@ And that's it! Your panel is now available on port 8080 of your server.
 
 Additional resources:
 
-* :doc:`Enabling SSL <guides/ssl-setup-nginx>`
-* Using a database instead of file-backed storage (TODO)
+* :doc:`Enabling SSL with Nginx <guides/ssl-setup-nginx>`

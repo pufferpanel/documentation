@@ -45,6 +45,7 @@ PufferPanel - Open Source Game Server Management
    :maxdepth: 1
    :caption: Release Notes
 
+   release-notes/2.6.0
    release-notes/2.5.2
    release-notes/2.5.1
    release-notes/2.5.0

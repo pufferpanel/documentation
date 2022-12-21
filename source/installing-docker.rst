@@ -9,13 +9,13 @@ Creating the container
 
 To create the container, start it, and add the default user:
 
-.. code-block::
+.. code-block:: bash
 
-    mkdir -p /var/lib/pufferpanel
-    docker volume create pufferpanel-config
-    docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel --restart=on-failure pufferpanel/pufferpanel:latest
-    docker start pufferpanel
-    docker exec -it pufferpanel /pufferpanel/pufferpanel user add
+    $ mkdir -p /var/lib/pufferpanel
+    $ docker volume create pufferpanel-config
+    $ docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel --restart=on-failure pufferpanel/pufferpanel:latest
+    $ docker start pufferpanel
+    $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
     
 And you're done. Your panel is now accessible at http://localhost:8080
 
@@ -26,7 +26,7 @@ Understanding the config
 With the usage of Docker, we move the configuration options to be environment variables. This means you don't have to override the config.json to apply changes.
 You can use the following to get all of the environment variables on the container.
 
-.. code-block::
+.. code-block:: bash
 
     docker inspect pufferpanel --format='{{range .Config.Env}}{{println .}}{{end}}'
 
