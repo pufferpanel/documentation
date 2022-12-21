@@ -2,7 +2,7 @@ v2.6.0
 ======
 
 v2.6.0 is a larger change than the previous releases. The biggest things to note with this release
-are the changes made to the local node structure and the additional of operators to handle Downloading
+are the changes made to the local node structure and the additional of operators to handle downloading
 Java and SteamCMD. This attempts to help get servers up and running faster than before.
 
 This does mean that templates were broken up and are no longer shared between environments. Templates
@@ -12,10 +12,11 @@ the JVM at installation time, so that it is not needed on the host machine anymo
 
 Templates as a whole were pruned of defective/one-off templates, and should now all work.
 
-SteamCMD likewise will use a SteamCMD container if Docker is used, which handles the dependencies that
-are associated with it. This is the better method to use SteamCMD, as it's a mess to run on a host machine.
-If needed, doing it without Docker is supported, and uses the DepotDownloader to handle downloading the game
-servers instead. This means SteamCMD is not required anymore, but may still be needed for certain game servers.
+SteamCMD likewise will use the `SteamCMD image <https://hub.docker.com/r/steamcmd/steamcmd>`_ if Docker is 
+used, which handles the dependencies that are associated with it. This is the better method to use SteamCMD,
+as it's a mess to run on a host machine. If needed, doing it without Docker is supported, and uses the 
+`DepotDownloader <https://github.com/SteamRE/DepotDownloader>`_ to handle downloading the game servers instead.
+This means SteamCMD is not required anymore, but may still be needed for certain game servers.
 
 Local nodes are now fully locked out of the UI from editing, and require setting values in the config to apply
 changes. This mainly will be the "Master URL" as the node's IP.
@@ -34,7 +35,7 @@ changing nature of this process and how many variants there can be. Users on Foc
 safe, but all other Ubuntu versions are impacted. It is recommended to change your sources.list file to use the 
 jammy repo to get future updates.
 
-Arm builds are likewise also receiving a cut-off. Anything prior to ARMv8 (older than a Pi 3) or ARMHF will no longer 
+ARM builds are likewise also receiving a cut-off. Anything prior to ARMv8 (older than a Pi 3) or ARMHF will no longer 
 have builds available for the same reasons above.
 
 Binary Folder
