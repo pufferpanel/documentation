@@ -110,7 +110,33 @@
   border-color: #444;
 }
 
-.dark .admonition p:not(.admonition-title) {
+.dark .admonition.tip {
+  background-color: #a4bbb7;
+  color: #333;
+}
+
+.dark .admonition.tip .admonition-title {
+  background-color: #138d75;
+  color: #222;
+}
+
+.dark .admonition.note {
+  background-color: #adb5bb;
+  color: #333;
+}
+
+.dark .admonition.note .admonition-title {
+  background-color: #4f84a6;
+  color: #222;
+}
+
+.dark .admonition.warning {
+  background-color: #b2a68f;
+  color: #333;
+}
+
+.dark .admonition.warning .admonition-title {
+  background-color: #a87d58;
   color: #222;
 }
 
