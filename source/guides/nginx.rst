@@ -11,6 +11,7 @@ Configuring nginx to serve your panel is pretty straight forward. All you have t
 
          server {
            listen 80;
+           listen [::]:80;
            server_name panel.examplehost.com;
 
            location ~ ^/\.well-known {
@@ -25,6 +26,7 @@ Configuring nginx to serve your panel is pretty straight forward. All you have t
 
          server {
            listen 443 ssl;
+           listen [::]:443 ssl;
            root /var/www/pufferpanel;
 
            ssl_certificate     /etc/nginx/ssl/<server>.crt;
