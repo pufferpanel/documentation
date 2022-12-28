@@ -1,1 +1,3 @@
-sphinx-tabs
+furo
+sphinx-inline-tabs
+sphinx-copybutton

@@ -31,19 +31,17 @@ Installing
 
 For easiest installation, if you have one of the listed supported distributions, you can simply install our package and get going!
 
-.. tabs::
+.. tab:: Ubuntu/Debian
 
-   .. tab:: Ubuntu/Debian
+   .. code-block:: bash
 
-      .. code-block:: bash
-
-         $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-         $ sudo apt-get install pufferpanel
-         $ sudo systemctl enable pufferpanel         
+      $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
+      $ sudo apt-get install pufferpanel
+      $ sudo systemctl enable pufferpanel         
          
-   .. tab:: Docker
+.. tab:: Docker
    
-      For Docker usage, please refer to :doc:`this page <installing-docker>`.
+   For Docker usage, please refer to :doc:`this page <installing-docker>`.
 
 
 Unsupported OS/Version
@@ -54,17 +52,15 @@ Unsupported OS/Version
 It is possible to install PufferPanel on other Debian or Red Hat based OS/Versions not listed in the table above.
 For a OS/Version that is not included in the table above, you will need to add :code:`os={os} dist={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
 
-.. tabs::
+.. tab:: DEB
 
-   .. tab:: DEB
+   .. code-block:: bash
 
-      .. code-block:: bash
-
-         $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
+      $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
          
-   .. tab:: RPM
+.. tab:: RPM
 
-      Installs using RPM files are a manual process. Refer to the `latest release <https://github.com/PufferPanel/PufferPanel/releases>`_ to get the RPM file.
+   Installs using RPM files are a manual process. Refer to the `latest release <https://github.com/PufferPanel/PufferPanel/releases>`_ to get the RPM file.
 
 Ports
 -----
