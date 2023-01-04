@@ -1,5 +1,5 @@
-v2.5.1 Changelog
-================
+v2.5.1
+======
 
 - Resolve security issue related with symlinks
 - Attempt to resolve mobile view losing header on pages

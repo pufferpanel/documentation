@@ -1,5 +1,5 @@
-v2.5.0 Changelog
-================
+v2.5.0
+======
 
 - Clean up database logger so errors are not shown incorrectly to users
 - Add server requirements when creating servers

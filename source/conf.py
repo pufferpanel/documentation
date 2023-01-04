@@ -12,7 +12,7 @@ release = u'2.x'
 #
 # needs_sphinx = '1.0'
 
-extensions = ['sphinx_tabs.tabs']
+extensions = ['sphinx_inline_tabs', 'sphinx_copybutton']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -41,15 +41,20 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 html_static_path = ['_static']
-html_css_files = ['css/custom.css']
 html_logo = '_static/logo.png'
 html_favicon = '_static/favicon.png'
 html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
-    'style_external_links': True
+    "sidebar_hide_name": True,
+    "light_css_variables": {
+        "color-brand-primary": "#07a7e3",
+        "color-brand-content": "#07a7e3",
+    },
+    "dark_css_variables": {
+        "color-brand-primary": "#07a7e3",
+        "color-brand-content": "#07a7e3",
+    },
 }
 
 htmlhelp_basename = 'PufferPaneldoc'

@@ -3,7 +3,7 @@ Using a Database
 
 PufferPanel supports several databases out of the box.
 
-- SQLite (default)
+- SQLite3 (default)
 - MySQL/MariaDB
 - PostgreSQL
 - Microsoft SQL Server

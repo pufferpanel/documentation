@@ -1,5 +1,5 @@
-v2.4.0 Changelog
-================
+v2.4.0
+======
 
 - Add OAuth 2 screens to both accounts and servers. This allows for creating clients which can talk to the API. This is the preferred method over using the older undocumented and unsupported method of using /auth/login.
 - Add hotkeys for accessing UI options

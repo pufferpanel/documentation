@@ -1,5 +1,5 @@
-v2.1.0 Release Notes
-====================
+v2.1.0
+======
 
 We are finally happy to release v2.1.0, which signifies the moving of the v2 release into an open release. We thank everyone who partook 
 in our alpha versions and helped provide feedback and bug reports. V2 has been a long time coming, and we finally happy to have it in the wild.
@@ -9,8 +9,8 @@ dev time into v1.2 anymore except for critical bug fixes or exploits.
 
 There is a lot to cover in what v2 even offers, so let's get started.
 
-v2 Changelog
-^^^^^^^^^^^^
+Changelog
+^^^^^^^^^^
 
 This release signifies the full move to `PackageCloud <https://packagecloud.io/pufferpanel/pufferpanel>`_ repos, so now our entire software suite
 is available via package managers. You will have to install our repo to get access to it, but now you can manage the versions of PufferPanel 

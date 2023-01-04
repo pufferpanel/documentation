@@ -12,52 +12,50 @@ To use Apache 2 as a reverse proxy you will need to enable the following modules
 * mod_rewrite
 
 
-.. tabs::
+.. tab:: SSL
 
-   .. tab:: SSL
+   This example assumes that you have a subdomain specific certificate located in Let's Encrypts default location, however you can of course use certificates from other authorities and certificates stored in other locations as well
 
-      This example assumes that you have a subdomain specific certificate located in Let's Encrypts default location, however you can of course use certificates from other authorities and certificates stored in other locations as well
+   .. code::
 
-      .. code::
+      <IfModule mod_ssl.c>
+          <VirtualHost _default_:443>
+              ServerName panel.example.com
 
-         <IfModule mod_ssl.c>
-             <VirtualHost _default_:443>
-                 ServerName panel.example.com
+              ProxyPreserveHost On
+              SSLProxyEngine On
+              ProxyPass / http://localhost:8080/
+              ProxyPassReverse / http://localhost:8080/
 
-                 ProxyPreserveHost On
-                 SSLProxyEngine On
-                 ProxyPass / http://localhost:8080/
-                 ProxyPassReverse / http://localhost:8080/
+              RewriteEngine on
+              RewriteCond %{HTTP:Upgrade} websocket [NC]
+              RewriteCond %{HTTP:Connection} upgrade [NC]
+              RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]
 
-                 RewriteEngine on
-                 RewriteCond %{HTTP:Upgrade} websocket [NC]
-                 RewriteCond %{HTTP:Connection} upgrade [NC]
-                 RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]
+              SSLEngine on
+              SSLCertificateFile /etc/letsencrypt/live/panel.example.com/fullchain.pem
+              SSLCertificateKeyFile /etc/letsencrypt/live/panel.example.com/privkey.pem
+          </VirtualHost>
+      </IfModule>
 
-                 SSLEngine on
-                 SSLCertificateFile /etc/letsencrypt/live/panel.example.com/fullchain.pem
-                 SSLCertificateKeyFile /etc/letsencrypt/live/panel.example.com/privkey.pem
-             </VirtualHost>
-         </IfModule>
+.. tab:: No SSL
 
-   .. tab:: No SSL
+   .. warning::
 
-      .. warning::
+      | PufferPanel has to send sensitive data like passwords over the network
+      | Because of this it is not advisable to run a publicly accessible instance on HTTP
 
-         | PufferPanel has to send sensitive data like passwords over the network
-         | Because of this it is not advisable to run a publicly accessible instance on HTTP
+   .. code::
 
-      .. code::
+      <VirtualHost _default_:80>
+          ServerName panel.example.com
 
-         <VirtualHost _default_:80>
-             ServerName panel.example.com
+          ProxyPreserveHost On
+          ProxyPass / http://localhost:8080/
+          ProxyPassReverse / http://localhost:8080/
 
-             ProxyPreserveHost On
-             ProxyPass / http://localhost:8080/
-             ProxyPassReverse / http://localhost:8080/
-
-             RewriteEngine on
-             RewriteCond %{HTTP:Upgrade} websocket [NC]
-             RewriteCond %{HTTP:Connection} upgrade [NC]
-             RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]
-         </VirtualHost>
+          RewriteEngine on
+          RewriteCond %{HTTP:Upgrade} websocket [NC]
+          RewriteCond %{HTTP:Connection} upgrade [NC]
+          RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]
+      </VirtualHost>

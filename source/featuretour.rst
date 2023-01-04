@@ -23,12 +23,10 @@ Build your own templates in no time and host anything you want
 Built to work wherever you are
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tabs::
+.. tab:: Desktop
 
-   .. tab:: Desktop
+   .. image:: images/featuretour/serverviewdesktop.png
 
-      .. image:: images/featuretour/serverviewdesktop.png
+.. tab:: Mobile/Tablet
 
-   .. tab:: Mobile/Tablet
-
-      .. image:: images/featuretour/serverviewmobile.png
+   .. image:: images/featuretour/serverviewmobile.png
