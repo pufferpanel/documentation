@@ -1,0 +1,13 @@
+v2.6.1
+======
+
+v2.6.1 is a bug fix over 2.6.0, which the changelog is available :doc:`here <2.6.0>`
+
+Changelog
+^^^^^^^^^
+
+- Fix reauth to not use HttpOnly, resulting in sessions timing out earlier than they should
+- Mount binary folder into Docker. Note, it is not added to the PATH due to Docker limitations.
+- Create binary folder on startup and install
+- Change SFTP to create ed25519 keys instead
+- Label Docker containers with the server id to help with tracking of servers.

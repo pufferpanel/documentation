@@ -1,5 +1,5 @@
 project = u'PufferPanel'
-copyright = u'2020 under the Apache 2 license'
+copyright = u'2023 under the Apache 2 license'
 author = u''
 
 # The short X.Y version
