@@ -1,0 +1,9 @@
+v2.6.3
+======
+
+v2.6.3 is a bug fix for 2.6.0, which the changelog is available :doc:`here <2.6.0>`
+
+Changelog
+^^^^^^^^^
+
+- Fix non-Sqlite databases to properly work with the new local node setup
