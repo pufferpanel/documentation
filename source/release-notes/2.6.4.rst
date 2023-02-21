@@ -1,0 +1,9 @@
+v2.6.4
+======
+
+v2.6.4 is a bug fix for 2.6.0, which the changelog is available :doc:`here <2.6.0>`
+
+Changelog
+^^^^^^^^^
+
+- Fix Drag and Drop to work more consistently for all file types
