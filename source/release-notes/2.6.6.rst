@@ -1,0 +1,12 @@
+v2.6.6
+======
+
+v2.6.6 is a bug fix for 2.6.0, which the changelog is available :doc:`here <2.6.0>`
+
+Changelog
+^^^^^^^^^
+
+- Fix creation of OAuth clients on an account-level
+- Fix server deletion when deleting a server on a remote node
+- Fix "undefined" showing up on the UI for node information
+- Ensure errors are thrown properly if OAuth client creation fails
