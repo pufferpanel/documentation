@@ -44,6 +44,7 @@ Q: How do I run a bot/are there templates for bots?
 
 PufferPanel works as an abstraction over the host OS so, it supports everything the host OS does.
 
-Generic templates for "X" bot/bot library don't exist, each project works differently. There is no generic way to cover them.
+Currently, there exist only templates for discord bots (python, js and JDA), found in the `templates repository <https://github.com/PufferPanel/templates/>`_ (can be imported directly from the panel).
 
-You'll need to create a template for them yourself, this is quite straight forward and there are plenty of  `example templates <https://github.com/PufferPanel/templates/>`_ to work from.
+If you want to host another type of bot, you'll need to create a template yourself.
+This is quite straight forward and there are plenty of  `example templates <https://github.com/PufferPanel/templates/>`_ to work from.
