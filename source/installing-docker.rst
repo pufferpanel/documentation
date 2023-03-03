@@ -7,6 +7,8 @@ We recommend using *latest* as it contains everything you will need to get serve
 Creating the container
 ----------------------
 
+**Via command line**
+
 To create the container, start it, and add the default user:
 
 .. code-block:: bash
@@ -16,8 +18,42 @@ To create the container, start it, and add the default user:
     $ docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel -v /var/run/docker.sock:/var/run/docker.sock --restart=on-failure pufferpanel/pufferpanel:latest
     $ docker start pufferpanel
     $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
-    
+
 And you're done. Your panel is now accessible at http://localhost:8080
+
+**Via Docker Compose**
+
+You will need the Docker Compose plugin installed on your system.
+
+Create the Pufferpanel directory: 
+
+.. code-block:: bash
+    $ mkdir -p /var/lib/pufferpanel
+
+Create the following ``docker-compose.yml`` file which defines the Pufferpanel service, including its ports and volume mappings. This is equivalent to the command line setup above. 
+
+.. code-block:: yml
+
+    version: '3.2'
+    services:
+      pufferpanel:
+        image: pufferpanel/pufferpanel:latest # See "Tags" for other images
+        restart: on-failure
+        ports:
+          - 8080:8080 # XXXX:8080, where XXXX on the outside will be sent to 8080 inside the container
+          - 5657:5657 # YYYY:5657
+        volumes:
+          - ./pufferpanel-config:/etc/pufferpanel
+          - /var/lib/pufferpanel:/var/lib/pufferpanel
+          - /var/run/docker.sock:/var/run/docker.sock
+
+Start the container and add the default user:
+
+.. code-block:: bash
+    $ docker compose up -d
+    $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
+
+And you're done. Your panel is now accessible at http://localhost:XXXX (where XXXX is 8080 as defined above).
 
 
 Understanding the config
