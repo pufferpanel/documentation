@@ -28,6 +28,7 @@ You will need the Docker Compose plugin installed on your system.
 Create the Pufferpanel directory: 
 
 .. code-block:: bash
+
     $ mkdir -p /var/lib/pufferpanel
 
 Create the following ``docker-compose.yml`` file which defines the Pufferpanel service, including its ports and volume mappings. This is equivalent to the command line setup above. 
@@ -40,7 +41,7 @@ Create the following ``docker-compose.yml`` file which defines the Pufferpanel s
         image: pufferpanel/pufferpanel:latest # See "Tags" for other images
         restart: on-failure
         ports:
-          - 8080:8080 # XXXX:8080, where XXXX on the outside will be sent to 8080 inside the container
+          - 8080:8080 # XXXX:8080, where port XXXX on the outside (host) will be sent to 8080 inside the container
           - 5657:5657 # YYYY:5657
         volumes:
           - ./pufferpanel-config:/etc/pufferpanel
@@ -50,6 +51,7 @@ Create the following ``docker-compose.yml`` file which defines the Pufferpanel s
 Start the container and add the default user:
 
 .. code-block:: bash
+
     $ docker compose up -d
     $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
 
