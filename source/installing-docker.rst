@@ -21,6 +21,8 @@ To create the container, start it, and add the default user:
 
 And you're done. Your panel is now accessible at http://localhost:8080
 
+----
+
 **Via Docker Compose**
 
 You will need the Docker Compose plugin installed on your system.
