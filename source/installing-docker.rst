@@ -46,9 +46,13 @@ Create the following ``docker-compose.yml`` file which defines the Pufferpanel s
           - 8080:8080 # XXXX:8080, where port XXXX on the outside (host) will be sent to 8080 inside the container
           - 5657:5657 # YYYY:5657
         volumes:
-          - ./pufferpanel-config:/etc/pufferpanel
+          - pufferpanel-config:/etc/pufferpanel
           - /var/lib/pufferpanel:/var/lib/pufferpanel
           - /var/run/docker.sock:/var/run/docker.sock
+    
+    volumes:
+      pufferpanel-config: # Creates a named volume, referenced above
+        external: false
 
 Start the container and add the default user:
 
