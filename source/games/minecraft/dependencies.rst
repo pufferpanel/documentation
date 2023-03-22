@@ -1,6 +1,10 @@
 Minecraft Dependencies
 ======================
 
+.. note::
+
+	This only applies if not using v2.6 or higher. Those versions will download Java as part of the server installation.
+
 Minecraft requires additional dependencies that are not managed by PufferPanel, failing to install these may result in errors like:
 
 .. code-block:: bash
