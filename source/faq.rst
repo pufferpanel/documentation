@@ -47,3 +47,10 @@ PufferPanel works as an abstraction over the host OS so, it supports everything 
 Generic templates for "X" bot/bot library don't exist, each project works differently. There is no generic way to cover them.
 
 You'll need to create a template for them yourself, this is quite straight forward and there are plenty of  `example templates <https://github.com/PufferPanel/templates/>`_ to work from.
+
+Q: I am getting permission errors with my files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Stop messing with your files outside of PufferPanel. PufferPanel does not run under a "special" user that ignores permissions on files. If you are mucking with them outside of the SFTP credentials provided by the panel, it *WILL* screw them up.
+
+To fix it, you can run `chown -R pufferpanel:pufferpanel /var/lib/pufferpanel` to fix the permissions once. If you run into this error again, re-read this entire block.
