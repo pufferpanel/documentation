@@ -35,9 +35,9 @@ For easiest installation, if you have one of the listed supported distributions,
 
    .. code-block:: bash
 
-      $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-      $ sudo apt-get install pufferpanel
-      $ sudo systemctl enable pufferpanel         
+      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
+      sudo apt-get install pufferpanel
+      sudo systemctl enable pufferpanel         
          
 .. tab:: Docker
    
@@ -56,7 +56,7 @@ For a OS/Version that is not included in the table above, you will need to add :
 
    .. code-block:: bash
 
-      $ curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
+      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
          
 .. tab:: RPM
 
@@ -78,7 +78,7 @@ To create your first user, run the following command. Be sure to enter "Y" when 
 
 .. code:: bash
 
-   $ sudo pufferpanel user add
+   sudo pufferpanel user add
 
 
 Starting the panel
@@ -86,7 +86,7 @@ Starting the panel
 
 .. code:: bash
 
-   $ sudo systemctl enable --now pufferpanel
+   sudo systemctl enable --now pufferpanel
 
 --------------------
 Managing the service
