@@ -1,0 +1,13 @@
+v2.6.7
+======
+
+v2.6.7 is an improvement and update to internal libraries and tooling.
+
+Changelog
+^^^^^^^^^
+
+- Fix servers to not become locked when the command is missing
+- Fix node connections to use proper structure for IPv6
+- Enable autofill for OTP codes in Safari
+- Update DepotDownloader. This fixes downloading games with public branches, and uses the linux-native binary. This removes the need for dotnet to be used.
+- Attempt to resolve issues editing users or servers and it failing due to "invalid" node values
