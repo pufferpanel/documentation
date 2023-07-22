@@ -49,7 +49,7 @@ Unsupported OS/Version
 .. warning::
    This is not recommended or supported. If it breaks, you're on your own!
    
-It is possible to install PufferPanel on other Debian or Red Hat based OS/Versions not listed in the table above.
+It is possible to install PufferPanel on other Debian, Red Hat based OS/Versions, and Arch Linux/Arch Linux ARM that are not listed in the table above.
 For a OS/Version that is not included in the table above, you will need to add :code:`os={os} dist={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
 
 .. tab:: DEB
@@ -61,6 +61,10 @@ For a OS/Version that is not included in the table above, you will need to add :
 .. tab:: RPM
 
    Installs using RPM files are a manual process. Refer to the `latest release <https://github.com/PufferPanel/PufferPanel/releases>`_ to get the RPM file.
+
+.. tab:: Arch Linux/Arch Linux ARM
+
+   It is also possible to install the AUR package `pufferpanel-bin <https://aur.archlinux.org/packages/pufferpanel-bin>`_.
 
 Ports
 -----
