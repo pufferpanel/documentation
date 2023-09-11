@@ -9,7 +9,14 @@ PufferPanel - Open Source Game Server Management
    installing-docker
    docker
    faq
-   featuretour   
+   featuretour
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Environments
+
+   environments/docker
+   environments/standard
 
 .. toctree::
    :maxdepth: 1
