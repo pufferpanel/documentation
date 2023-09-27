@@ -10,7 +10,7 @@ Themes
 Using Themes
 ------------
 
-Every theme consists of one ``.tar`` file, place this file (without extracting it) in the ``themes`` directory in your panels web files (usually ``/var/www/pufferpanel/``)
+Every theme consists of one ``.tar`` file, place this file (without extracting it) in the ``theme`` directory in your panels web files (usually ``/var/www/pufferpanel/``)
 The next time you visit your panel the dark mode button will have turned into a theming button which, when clicked, will bring up both the dark mode switch and all the themes available on your panel
 
 
