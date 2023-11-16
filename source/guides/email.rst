@@ -35,6 +35,7 @@ Under "panel", add an email section. It should look like this: (dont include com
          "password": "*******"
          "provider": "mailgun",
          "key": "your_api_key"
+         "domain": "your_api_key"
        }
      }
    }
@@ -42,10 +43,12 @@ Under "panel", add an email section. It should look like this: (dont include com
 Now, adjust the config options to your needs.  
 
 provider
-  debug, SMTP, or mailgun.
+  debug, SMTP, mailgun or mailjet.
 
 key
   mailgun: API key
+
+  mailjet: Private API Key
 
 from
   SMTP: the e-mail address the messages will be sent from
@@ -58,6 +61,9 @@ username
 
 password
   SMTP: the password to use when authenticating with the mail server
+
+domain
+  mailjet: Public API Key
 
 Once you've set it up, restart PufferPanel.
 
