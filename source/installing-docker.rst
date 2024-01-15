@@ -3,7 +3,7 @@ Installing PufferPanel using Docker
 
 .. 
 
-   The Docker image is currently X86_64 only dute to limitations in the Github Actions infrastructure.
+   The Docker image is currently X86_64 only due to limitations in the Github Actions infrastructure.
 
 PufferPanel offers several images that include dependencies needed to run game servers. 
 We recommend using *latest* as it contains everything you will need to get servers runing quickly.
