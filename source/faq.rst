@@ -54,3 +54,11 @@ Q: I am getting permission errors with my files
 Stop messing with your files outside of PufferPanel. PufferPanel does not run under a "special" user that ignores permissions on files. If you are mucking with them outside of the SFTP credentials provided by the panel, it *WILL* screw them up.
 
 To fix it, you can run ``chown -R pufferpanel:pufferpanel /var/lib/pufferpanel`` to fix the permissions once. If you run into this error again, re-read this entire block.
+
+Q: I am having a port conflict, how do I change the port?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Update the port in ``web.host`` in the panels config (``/etc/pufferpanel/config.json``).
+
+  N.B. for access over the internet, you should **always** `use a reverse proxy to setup TLS </en/latest/guides/ssl-setup-nginx.html>`_.
+
