@@ -9,7 +9,6 @@ PufferPanel - Open Source Game Server Management
    installing-docker
    docker
    faq
-   featuretour
 
 .. toctree::
    :maxdepth: 1
@@ -27,7 +26,6 @@ PufferPanel - Open Source Game Server Management
    guides/caddy
    guides/database
    guides/ssl-setup-nginx
-   guides/themes
    guides/email
    templates/templates
    guides/contributing
@@ -46,7 +44,6 @@ PufferPanel - Open Source Game Server Management
 
    games/sourceds/autoupdate
    games/srcds/dependencies
-   games/minecraft/dependencies
 
 .. toctree::
    :maxdepth: 1
