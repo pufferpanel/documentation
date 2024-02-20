@@ -37,34 +37,21 @@ For easiest installation, if you have one of the listed supported distributions,
 
       curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
       sudo apt-get install pufferpanel
-      sudo systemctl enable pufferpanel         
-         
-.. tab:: Docker
-   
-   For Docker usage, please refer to :doc:`this page <installing-docker>`.
+      sudo systemctl enable pufferpanel
 
-
-Unsupported OS/Version
-----------------------
-.. warning::
-   This is not recommended or supported. If it breaks, you're on your own!
-   
-It is possible to install PufferPanel on other Debian, Red Hat based OS/Versions, and Arch Linux/Arch Linux ARM that are not listed in the table above.
-For a OS/Version that is not included in the table above, you will need to add :code:`os={os} dist={version}` with a os/version that is included in the repository, to the curl command between sudo and bash. i.e.
-
-.. tab:: DEB
+.. tab:: Red-Hat
 
    .. code-block:: bash
 
-      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo os=ubuntu dist=jammy bash
-         
-.. tab:: RPM
+      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo bash
+      sudo yum install pufferpanel
+      sudo systemctl enable pufferpanel
 
-   Installs using RPM files are a manual process. Refer to the `latest release <https://github.com/PufferPanel/PufferPanel/releases>`_ to get the RPM file.
 
-.. tab:: Arch Linux/Arch Linux ARM
+.. tab:: Docker
 
-   It is also possible to install the AUR package `pufferpanel-bin <https://aur.archlinux.org/packages/pufferpanel-bin>`_.
+   For Docker usage, please refer to :doc:`this page <installing-docker>`.
+
 
 Ports
 -----
