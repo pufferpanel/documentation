@@ -1,11 +1,13 @@
 Installing PufferPanel
 ======================
 
-.. warning::
+.. danger::
 
-   3.x is currently an ALPHA RELEASE. THIS MEANS THERE WILL BE BUGS! USE AT YOUR OWN RISK.
+   3.x IS AN ALPHA RELEASE. THIS MEANS THERE WILL BE BUGS! USE AT YOUR OWN RISK.
 
-   There is currently no migration path from 2.x to 3.x at this time. This is on the roadmap to resolve before an actual 3.x release. Do not attempt to update from 2.x to 3.x.
+.. danger::
+
+   There is currently no migration path from 2.x to 3.x at this time. This is on the roadmap to resolve before an actual 3.x release. Do not attempt to update from 2.x to 3.x!
 
 
 System Requirements
