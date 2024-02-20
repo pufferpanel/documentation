@@ -62,3 +62,12 @@ Update the port in ``web.host`` in the panels config (``/etc/pufferpanel/config.
 
   Note: The _only_ reason to ever do this, is for handling port conflicts. When you want to have your game panel exposed over the internet, you should **always** `use a reverse proxy to setup TLS </en/latest/guides/ssl-setup-nginx.html>`_, to ensure your server remains secure.
 
+Q: Where do I find my servers IP address?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PufferPanel will bind to every address on its host system by default, you can find interface addresses on most Linux systems via ``ip a``. If you don't have access to this, you're likely not using a supported platform.
+
+Q: Can I use GitHub CodeSpaces/I need help with GitHub CodeSpaces.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is against GitHub's TOS to use their services for hosting, consequently, we will not provide any support.
