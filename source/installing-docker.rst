@@ -1,6 +1,14 @@
 Installing PufferPanel using Docker
 ===================================
 
+.. danger::
+
+   3.x IS AN ALPHA RELEASE. THIS MEANS THERE WILL BE BUGS! USE AT YOUR OWN RISK.
+
+.. danger::
+
+   There is currently no migration path from 2.x to 3.x at this time. This is on the roadmap to resolve before an actual 3.x release. Do not attempt to update from 2.x to 3.x!
+
 .. 
 
    The Docker image is currently X86_64 only due to limitations in the Github Actions infrastructure.
