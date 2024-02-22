@@ -1,9 +1,0 @@
-v2.3.2
-======
-
-- Fix local node addition causing errors when changing it's name
-- Add flag to disable registrations (panel.registrationEnabled)
-- Fix deleting servers not removing servers properly
-- Fix toggles on the Admin page for servers
-- Add extra packages for the docker massive image
-- Attempt to resolve some performance issues with the console

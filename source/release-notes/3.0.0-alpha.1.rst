@@ -1,0 +1,43 @@
+v3.0.0 - Alpha 1
+======
+
+This marks the first alpha release of v3.0.0. This release has been years in the making.
+It comes with significant changes to the backend and frontend to ensure a smoother experience.
+
+The goals of v3 are to improve on things we learned from v2 and update the UI to a more friendly
+look and feel. We are still working on improving aspects of the UI, so things may still change as
+we go.
+
+The backend has seen a clean up of how things work. The API has been standardized a bit more and
+the documentation has been updated to account for this. The concept of the "proxy" no longer is
+exposed publicly, but the API will still proxy requests as needed.
+
+Templates have also been updated with the new concept of "conditions". This is a basic "if" statement
+system that is designed to help consolidate our templates and drive better logic about if an operator
+should run. Things that the conditions now support are checking if a variable is set or if it's a
+certain value, if a file exist, or if something is in the PATH env. This means our templates now
+can support both environments at the same time, with the conditions driving what operators may be used.
+
+Commands now also support the condition concept. A server can have multiple different commands, and
+one is chosen based on these conditions.
+
+We have also moved to using the "any/any" repo. This means that we have a single repository that handles
+the packages, so the workarounds for getting an "unsupported" or a newly released LTS version of an OS
+should not be needed anymore.
+
+Our Docker image also has been cleaned up. It has instead now been designed to only run the panel and
+a node which creates Docker containers. It will no longer run servers inside of itself. This, while
+useful to create a quick server, caused the image to be bloated and hard to manage. We also exposed a
+new config entry so that servers using Docker can better expose a folder on the host that isn't explicitly
+defined in the image. Previously, it was an explicit path, and changing it required changing several things.
+Now, a single config entry allows hiding this.
+
+We also have created a new "tester" designed to keep our templates more consistent and ensure they function
+prior to being released. Generally speaking, the templates now have been at least validated to run and 
+not crash immediately. This does mean we have removed several templates that either were not functional or
+were believed to be dead software.
+
+Full Changelog
+^^^^^^^^^^^^^^
+
+To come...

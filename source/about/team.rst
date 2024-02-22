@@ -11,7 +11,7 @@ PufferPanel started out as a custom solution for a small Minecraft Host, but qui
 +----------------------------------------------------------------+------------------------------------------------------------------------+-------------------+
 | .. image::                                                     | puffrfish                                                              | Founder           |
 |    http://gravatar.com/avatar/b1941b2071903182dcc47598d8d10fad |                                                                        |                   |
-|                                                                | `GitHub <https://github.com/puffrfish>`_                               | Community Liaison |
+|                                                                | `GitHub <https://github.com/puffrfish>`_                               |  |
 +----------------------------------------------------------------+------------------------------------------------------------------------+-------------------+
 | .. image::                                                     | Joshua Taylor                                                          | Head Developer    |
 |    http://gravatar.com/avatar/edde31fa49f872ee344765c6707f5291 |                                                                        |                   |
