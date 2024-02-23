@@ -1,5 +1,5 @@
 v3.0.0 - Alpha 1
-======
+================
 
 This marks the first alpha release of v3.0.0. This release has been years in the making.
 It comes with significant changes to the backend and frontend to ensure a smoother experience.
@@ -12,32 +12,60 @@ The backend has seen a clean up of how things work. The API has been standardize
 the documentation has been updated to account for this. The concept of the "proxy" no longer is
 exposed publicly, but the API will still proxy requests as needed.
 
-Templates have also been updated with the new concept of "conditions". This is a basic "if" statement
-system that is designed to help consolidate our templates and drive better logic about if an operator
-should run. Things that the conditions now support are checking if a variable is set or if it's a
-certain value, if a file exist, or if something is in the PATH env. This means our templates now
-can support both environments at the same time, with the conditions driving what operators may be used.
+Templates have also been updated with the new concept of "conditions". This is a basic "if" 
+statement system that is designed to help consolidate our templates and drive better logic about
+if an operator should run. Things that the conditions now support are checking if a variable is 
+set or if it's a certain value, if a file exist, or if something is in the PATH env. This means 
+our templates now can support both environments at the same time, with the conditions driving 
+what operators may be used.
 
-Commands now also support the condition concept. A server can have multiple different commands, and
-one is chosen based on these conditions.
+Commands now also support the condition concept. A server can have multiple different commands, 
+and one is chosen based on these conditions.
 
-We have also moved to using the "any/any" repo. This means that we have a single repository that handles
-the packages, so the workarounds for getting an "unsupported" or a newly released LTS version of an OS
-should not be needed anymore.
+We have also moved to using the "any/any" repo. This means that we have a single repository that 
+handles the packages, so the workarounds for getting an "unsupported" or a newly released LTS 
+version of an OS should not be needed anymore.
 
-Our Docker image also has been cleaned up. It has instead now been designed to only run the panel and
-a node which creates Docker containers. It will no longer run servers inside of itself. This, while
-useful to create a quick server, caused the image to be bloated and hard to manage. We also exposed a
-new config entry so that servers using Docker can better expose a folder on the host that isn't explicitly
-defined in the image. Previously, it was an explicit path, and changing it required changing several things.
-Now, a single config entry allows hiding this.
+Our Docker image also has been cleaned up. It has instead now been designed to only run the panel 
+and a node which creates Docker containers. It will no longer run servers inside of itself. This, 
+while useful to create a quick server, caused the image to be bloated and hard to manage. We also 
+exposed a new config entry so that servers using Docker can better expose a folder on the host 
+that isn't explicitly defined in the image. Previously, it was an explicit path, and changing it 
+required changing several things. Now, a single config entry allows hiding this.
 
-We also have created a new "tester" designed to keep our templates more consistent and ensure they function
-prior to being released. Generally speaking, the templates now have been at least validated to run and 
-not crash immediately. This does mean we have removed several templates that either were not functional or
-were believed to be dead software.
+We also have created a new "tester" designed to keep our templates more consistent and ensure 
+they function prior to being released. Generally speaking, the templates now have been at least 
+validated to run and not crash immediately. This does mean we have removed several templates that 
+either were not functional or were believed to be dead software.
 
 Full Changelog
 ^^^^^^^^^^^^^^
 
-To come...
+UI
+""
+
+* Improved flow for server creation, steps are a bit more fluid. Install is also prompted after
+  creation to help bring this action to the front.
+* Server UI will show a game server icon to help quickly identify a server type. This is controlled
+  by the "type".
+* Templates are now pulled on demand, and only stored if modifications are required. Local templates
+  can be managed independently.
+* Node page will show some hardware information about the node. Information includes the OS type, 
+  cpu architecture, and if the node supports Docker. This page will also show if a node is online.
+* Numerous bug fixes and code clean-ups
+
+Backend
+"""""""
+
+* Templates can now directly pull from CurseForge. A key is provided by default so servers can be
+  created from modpacks from CurseForge. The panel will attempt to set up the server to the best of
+  it's ability.
+* Forge will attempt to handle both install methods. This means running the installer should permit
+  all versions of Forge to work correctly. However, only newer versions of Forge are validated.
+* RCON and TELNET are now supported for commands. If a server needs RCON or TELNET to be used for
+  commands, a template can specify a "stdin" section to specify additional information.
+* Logging should now support rolling over, so tools like logrotate should properly work. This is not
+  fully confirmed though.
+* Better hooks into systemd. We will now report that we are starting up/shutting down to systemd.
+* Docker image names now support variable replacements
+* Numerous bug fixes and code clean-ups
