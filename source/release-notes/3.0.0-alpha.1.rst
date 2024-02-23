@@ -52,6 +52,8 @@ UI
   can be managed independently.
 * Node page will show some hardware information about the node. Information includes the OS type, 
   cpu architecture, and if the node supports Docker. This page will also show if a node is online.
+* Permissions have been stream-lined a little more. Actions are now more explicitly defined as a
+  permission and so there are more permissions available. 
 * Numerous bug fixes and code clean-ups
 
 Backend

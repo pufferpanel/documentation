@@ -37,13 +37,14 @@ System Requirements
 Installing
 ----------
 
-For easiest installation, if you have one of the listed supported distributions, you can simply install our package and get going!
+For easiest installation, if you have one of the listed supported distributions, you can simply install our package and get going!.
 
 .. tab:: Ubuntu/Debian
 
    .. code-block:: bash
 
-      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
+      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" > sudo tee /etc/apt/sources.list.d/pufferpanel.list
+      sudo apt update
       sudo apt-get install pufferpanel
       sudo systemctl enable pufferpanel
 
@@ -51,7 +52,16 @@ For easiest installation, if you have one of the listed supported distributions,
 
    .. code-block:: bash
 
-      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh | sudo bash
+      echo "   [pufferpanel]
+    name=pufferpanel
+    baseurl=https://packagecloud.io/pufferpanel/pufferpanel/rpm_any/rpm_any/$basearch
+    repo_gpgcheck=1
+    gpgcheck=0
+    enabled=1
+    gpgkey=https://packagecloud.io/pufferpanel/pufferpanel/gpgkey
+    sslverify=1
+    sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+    metadata_expire=300" > sudo tee /etc/yum.repos.d/pufferpanel.repo
       sudo yum install pufferpanel
       sudo systemctl enable pufferpanel
 
