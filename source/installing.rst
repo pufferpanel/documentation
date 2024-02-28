@@ -25,6 +25,17 @@ System Requirements
 | Raspbian Bullseye (11) | No    | Yes   | Yes   |
 +------------------------+-------+-------+-------+
 
+* If your operating system is not listed above take a look at :ref:`this<unsupportedos>`
+
+
+Ports
+-----
+
+The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
+
+* 8080: Web access
+* 5657: SFTP
+
 
 Installing
 ----------
@@ -36,13 +47,51 @@ For easiest installation, if you have one of the listed supported distributions,
    .. code-block:: bash
 
       curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-      sudo apt-get install pufferpanel
-      sudo systemctl enable pufferpanel         
+      sudo apt-get install pufferpanel        
          
 .. tab:: Docker
    
    For Docker usage, please refer to :doc:`this page <installing-docker>`.
 
+
+Adding an admin
+---------------
+
+To create your first user, run the following command. Be sure to enter "Y" when it asks if this is an admin so you can fully use your panel.
+
+.. code:: bash
+
+   sudo pufferpanel user add
+
+
+Starting the panel
+------------------
+
+After doing all of the above you are ready to start your panel.
+
+.. code:: bash
+
+   sudo systemctl enable --now pufferpanel
+
+--------------------
+Managing the service
+--------------------
+
+PufferPanel uses Systemd to manage the service, consult the man page `man systemctl` or `a guide <https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units>`_ for instructions on how to use it.
+
+Done!
+-----
+
+And that's it! Your panel is now available on port 8080 of your server.
+
+Additional resources:
+
+* :doc:`Enabling SSL with Nginx <guides/ssl-setup-nginx>`
+* :doc:`Running servers without Docker <environments/standard>`
+* :doc:`Running servers with Docker <environments/docker>`
+
+
+.. _unsupportedos:
 
 Unsupported OS/Version
 ----------------------
@@ -65,46 +114,3 @@ For a OS/Version that is not included in the table above, you will need to add :
 .. tab:: Arch Linux/Arch Linux ARM
 
    It is also possible to install the AUR package `pufferpanel-bin <https://aur.archlinux.org/packages/pufferpanel-bin>`_.
-
-Ports
------
-
-The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
-
-* 8080: Web access
-* 5657: SFTP
-
-
-Adding an admin
----------------
-
-To create your first user, run the following command. Be sure to enter "Y" when it asks if this is an admin so you can fully use your panel.
-
-.. code:: bash
-
-   sudo pufferpanel user add
-
-
-Starting the panel
-------------------
-
-.. code:: bash
-
-   sudo systemctl enable --now pufferpanel
-
---------------------
-Managing the service
---------------------
-
-PufferPanel uses Systemd to manage the service, consult the man page `man systemctl` or `a guide <https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units>`_ for instructions on how to use it.
-
-Done!
------
-
-And that's it! Your panel is now available on port 8080 of your server.
-
-Additional resources:
-
-* :doc:`Enabling SSL with Nginx <guides/ssl-setup-nginx>`
-* :doc:`Running servers without Docker <environments/standard>`
-* :doc:`Running servers with Docker <environments/docker>`
