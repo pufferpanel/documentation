@@ -24,11 +24,6 @@ Q: Where are the servers located?
 PufferPanel stores all the servers in ``/var/lib/pufferpanel/servers``.
 
 
-Q: Can I migrate from v1 to v2?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-At this time, we do not have a migration path to v2. Due to the changing nature of v2, we do not want to have to deal with rewriting migrations if we have to make changes. Once v2 is more stable, we will have a migration tool to help move from v1 to v2.
-
 Q: How do I disable user registration?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -48,19 +43,6 @@ Generic templates for "X" bot/bot library don't exist, each project works differ
 
 You'll need to create a template for them yourself, this is quite straight forward and there are plenty of  `example templates <https://github.com/PufferPanel/templates/>`_ to work from.
 
-Q: I am getting permission errors with my files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Stop messing with your files outside of PufferPanel. PufferPanel does not run under a "special" user that ignores permissions on files. If you are mucking with them outside of the SFTP credentials provided by the panel, it *WILL* screw them up.
-
-To fix it, you can run ``chown -R pufferpanel:pufferpanel /var/lib/pufferpanel`` to fix the permissions once. If you run into this error again, re-read this entire block.
-
-Q: I am having a port conflict, how do I change the port?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Update the port in ``web.host`` in the panels config (``/etc/pufferpanel/config.json``).
-
-  Note: The _only_ reason to ever do this, is for handling port conflicts. When you want to have your game panel exposed over the internet, you should **always** `use a reverse proxy to setup TLS </en/latest/guides/ssl-setup-nginx.html>`_, to ensure your server remains secure.
 
 Q: Where do I find my servers IP address?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
