@@ -41,4 +41,4 @@ I still have Problem XYZ, what should i do?
 
 If all of the above didnt resolve youre problem feel free to come to our discord server in the support channel or create an issue on github(slower). And make a post with all the information you collected up until now and tell us more about your hosting enviroment as some providers may have secondary firewalls in place or you may be behind a NAT which requires Port forwarding.
 
-  Please note it may get embarrassing if you get sent a to this page as an answer to your post
+  Please note it may get embarrassing if you get sent a link to this page as an answer to your post
