@@ -27,7 +27,7 @@ It should be noted ports below 1024 can't be bound to by pufferpanel as those re
 
 Update the port in ``web.host`` in the panels config (``/etc/pufferpanel/config.json``).
 
-  Note: The **only** reason to ever do this, is for handling port conflicts. IF you want to have your game panel exposed over the internet, you should **always** `use a reverse proxy to setup TLS </en/latest/guides/ssl-setup-nginx.html>`_, to ensure your server remains secure.
+  Note: The **only** reason to ever do this, is for handling port conflicts. **If** you want to have your game panel exposed over the internet, you should **always** `use a reverse proxy to setup TLS </en/latest/guides/ssl-setup-nginx.html>`_, to ensure your server remains secure.
 
 
 I've setup pufferpanel on my old PC, but my friend can't join.
