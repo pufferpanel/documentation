@@ -4,7 +4,7 @@ Themes
 
 .. note::
 
-   Theming support has been added with 2.1.0, older version do not support this
+   Theming support has been added with 2.1.0, older versions do not support this
 
 
 Using Themes
