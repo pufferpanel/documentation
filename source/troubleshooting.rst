@@ -5,6 +5,7 @@ How do I know what to do?
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Take a look at your logs and at the service, look for any unusual behavior to get a direction on where to look if you don't have one already.
+
   Logs are generally stored ``/var/log/pufferpanel/``
 
   Service can be checked with ``systemctl status pufferpanel``
