@@ -34,7 +34,7 @@ Update the port in ``web.host`` in the panels config (``/etc/pufferpanel/config.
 I've setup PufferPanel at home, but my friend can't join.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this case we cant provide a universal solution but simply can tell you to forward the gameservers port via your router, as this process differs between models and manufacturers we advice to look at the routers manual.
+In this case we can't provide a universal solution but simply can tell you to forward the gameservers port via your router, as this process differs between models and manufacturers we advice to look at the routers manual.
 
 
 I still have Problem XYZ, what should i do?
