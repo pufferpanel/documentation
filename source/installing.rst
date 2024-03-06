@@ -33,22 +33,43 @@ System Requirements
 | Raspbian Bullseye (11) | No    | Yes   | Yes   |
 +------------------------+-------+-------+-------+
 
+Ports
+-----
+
+The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
+
+* 8080: Web access
+* 5657: SFTP
 
 Installing
 ----------
 
 For easiest installation, if you have one of the listed supported distributions, you can simply install our package and get going!.
 
-.. tab:: Ubuntu/Debian
+.. tab:: DEB-based
+
+   .. code-block:: bash
+
+      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh?any=true | sudo bash
+      sudo apt update
+      sudo apt-get install pufferpanel
+
+.. tab:: RPM-based
+
+   .. code-block:: bash
+
+      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh?any=true | sudo bash
+      sudo yum install pufferpanel
+
+.. tab:: Ubuntu/Debian - Manual Repo
 
    .. code-block:: bash
 
       echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" > sudo tee /etc/apt/sources.list.d/pufferpanel.list
       sudo apt update
       sudo apt-get install pufferpanel
-      sudo systemctl enable pufferpanel
 
-.. tab:: Red-Hat
+.. tab:: Red-Hat - Manual Repo
 
    .. code-block:: bash
 
@@ -63,21 +84,6 @@ For easiest installation, if you have one of the listed supported distributions,
     sslcacert=/etc/pki/tls/certs/ca-bundle.crt
     metadata_expire=300" > sudo tee /etc/yum.repos.d/pufferpanel.repo
       sudo yum install pufferpanel
-      sudo systemctl enable pufferpanel
-
-
-.. tab:: Docker
-
-   For Docker usage, please refer to :doc:`this page <installing-docker>`.
-
-
-Ports
------
-
-The following ports are used by PufferPanel. Please allow traffic to/from these ports to fully use your installation.
-
-* 8080: Web access
-* 5657: SFTP
 
 
 Adding an admin
