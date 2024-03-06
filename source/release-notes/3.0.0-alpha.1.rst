@@ -10,7 +10,8 @@ we go.
 
 The backend has seen a clean up of how things work. The API has been standardized a bit more and
 the documentation has been updated to account for this. The concept of the "proxy" no longer is
-exposed publicly, but the API will still proxy requests as needed.
+exposed publicly, but the API will still proxy requests as needed. We also updated our swagger
+documentation to try to be more complete. Do note however it may still be missing some information.
 
 Templates have also been updated with the new concept of "conditions". This is a basic "if" 
 statement system that is designed to help consolidate our templates and drive better logic about
@@ -22,9 +23,9 @@ what operators may be used.
 Commands now also support the condition concept. A server can have multiple different commands, 
 and one is chosen based on these conditions.
 
-We have also moved to using the "any/any" repo. This means that we have a single repository that 
-handles the packages, so the workarounds for getting an "unsupported" or a newly released LTS 
-version of an OS should not be needed anymore.
+We have also moved to using the "any/any" repo with `packagecloud <https://packagecloud.io/pufferpanel/pufferpanel>`. 
+This means that we have a single repository that handles the packages, so the workarounds for 
+getting an "unsupported" or a newly released LTS version of an OS should not be needed anymore.
 
 Our Docker image also has been cleaned up. It has instead now been designed to only run the panel 
 and a node which creates Docker containers. It will no longer run servers inside of itself. This, 
@@ -32,6 +33,9 @@ while useful to create a quick server, caused the image to be bloated and hard t
 exposed a new config entry so that servers using Docker can better expose a folder on the host 
 that isn't explicitly defined in the image. Previously, it was an explicit path, and changing it 
 required changing several things. Now, a single config entry allows hiding this.
+
+NOTE: Currently, the Docker image is not available through DockerHub. We are working to get it 
+published there. 
 
 We also have created a new "tester" designed to keep our templates more consistent and ensure 
 they function prior to being released. Generally speaking, the templates now have been at least 
