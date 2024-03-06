@@ -23,7 +23,7 @@ what operators may be used.
 Commands now also support the condition concept. A server can have multiple different commands, 
 and one is chosen based on these conditions.
 
-We have also moved to using the "any/any" repo with `packagecloud <https://packagecloud.io/pufferpanel/pufferpanel>`. 
+We have also moved to using the "any/any" repo with `packagecloud <https://packagecloud.io/pufferpanel/pufferpanel>`_. 
 This means that we have a single repository that handles the packages, so the workarounds for 
 getting an "unsupported" or a newly released LTS version of an OS should not be needed anymore.
 
