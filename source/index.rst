@@ -49,4 +49,4 @@ PufferPanel - Open Source Game Server Management
    :caption: Release Notes
 
    release-notes/3.0.0-alpha.1
-   
+   release-notes/3.0.0-alpha.2

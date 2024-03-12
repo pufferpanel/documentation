@@ -1,0 +1,10 @@
+v3.0.0 - Alpha 2
+================
+
+Refer to the full changelog from :doc:`Alpha 1 <release-notes/3.0.0-alpha.2>` for the full changelog for v3.
+
+Changelog
+#########
+
+- Fix SFTP for local nodes not using the new naming scheme and using an invalid check
+- Correct local nodes to pull their hostname from the config
