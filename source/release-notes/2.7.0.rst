@@ -1,0 +1,10 @@
+v2.7.0
+======
+
+This release targets a security issue and small bug fixes
+
+Changelog
+^^^^^^^^^
+
+- Resolve undisclosed security issue
+- Permit %7C to be used for SFTP when | is not viable
