@@ -72,7 +72,7 @@ Q: Can I use GitHub CodeSpaces/I need help with GitHub CodeSpaces.
 
 It is against GitHub's TOS to use their services for hosting, consequently, we will not provide any support.
 
-Q: I didn't press install and I am having issues with missing X.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Q: I am having issues with missing X.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Try pressing install first before seeking support.
