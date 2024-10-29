@@ -65,8 +65,8 @@ Setup
      },
      "daemon": {
        "data": {
-         "servers": "../PufferPanelData/servers"
-         "modules": "../PufferPanelData/modules"
+         "servers": "../PufferPanelData/servers",
+         "modules": "../PufferPanelData/modules",
          "cache": "../PufferPanelData/cache"
        }
      }
