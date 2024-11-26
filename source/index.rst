@@ -32,6 +32,7 @@ PufferPanel - Open Source Game Server Management
    guides/import-minecraft-server
    guides/themes/installing
    guides/themes/creating
+   guides/create-node
 
 .. toctree::
    :maxdepth: 1
