@@ -195,7 +195,7 @@ Changelog
 - Resolve issues with migrations for Postgres and MySQL
 - Fix issue with local node message appearing for non-local nodes
 
-v3.0.0 - Release Candidate 4-6
+v3.0.0 - Release Candidate 7
 ============================
 
 Changelog
