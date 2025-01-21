@@ -59,6 +59,9 @@ UI
   cpu architecture, and if the node supports Docker. This page will also show if a node is online.
 * Permissions have been stream-lined a little more. Actions are now more explicitly defined as a
   permission and so there are more permissions available. 
+* Backup UI added. This is a basic backup with no frills. Backup and restores can only be done with 
+  a server being off. Restores will delete ALL files! Backups are compressed, so large servers will 
+  need to account for this.
 * Numerous bug fixes and code clean-ups
 
 Backend
@@ -191,3 +194,17 @@ Changelog
 - Add display for JCMD stats
 - Resolve issues with migrations for Postgres and MySQL
 - Fix issue with local node message appearing for non-local nodes
+
+v3.0.0 - Release Candidate 4-6
+============================
+
+Changelog
+#########
+- Update DepotDownloader to resolve Steam download issues
+- Correct issues with migrating data
+- Update CurseForge runners to support NeoForge-based modpacks
+- Use ServerStarter for NeoForge-based servers
+- Fix permissions so admins can SFTP into servers they are not explicitly defined in
+- Implement a basic backup system
+- Correct emails to follow RFC 5322
+- Fix issues with editing Docker settings
