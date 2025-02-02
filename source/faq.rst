@@ -11,6 +11,10 @@ As such, we do not believe we are the best software for such a service. We do no
 
 While a module may occur in the future, the current panel code is not suitable for supporting such a feature.
 
+Q: Do You Provide Support for Game/Bot/Application Hosts?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+No, PufferPanel only provides support for personal use. As we do not provide any support guarantees, we believe that hosts without the technical capabilities to support themselves are an unethical drain on resources.
 
 Q: Where are my logs?
 ^^^^^^^^^^^^^^^^^^^^^
