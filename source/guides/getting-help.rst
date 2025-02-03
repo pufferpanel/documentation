@@ -55,3 +55,5 @@ To avoid playing 20 questions, please also include the following information:
 * (If Applicable) What template you're using I.E. ``Minecraft`` or ``Palworld``.
 
 * (If Applicable) What environment you're trying to use. I.E ``docker`` or ``host``.
+
+* Your install method, I.E. Native Package or Docker.
