@@ -33,6 +33,7 @@ PufferPanel - Open Source Game Server Management
    templates/templates
    guides/contributing
    guides/import-minecraft-server
+   guides/common-problems
 
 .. toctree::
    :maxdepth: 1
