@@ -83,6 +83,17 @@ For easiest installation, if you have one of the listed supported distributions,
     metadata_expire=300" > sudo tee /etc/yum.repos.d/pufferpanel.repo
       sudo yum install pufferpanel
 
+.. tab:: Windows - Self Service
+
+  .. warning::
+    Windows installations of PufferPanel are an _advanced_ feature, do not expect any support to be provided.
+
+    Windows builds are provided on our GitHub, these builds are provided as an advanced option for experienced administrators who have exhausted all other avenues of getting software running on Linux.
+
+    Consequently, we expect users to self-service these installations.
+
+    `Windows builds can be found here, on our releases page <https://github.com/pufferpanel/pufferpanel/releases>`_
+
 
 Adding an admin
 ---------------
