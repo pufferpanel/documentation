@@ -41,6 +41,7 @@ PufferPanel - Open Source Game Server Management
 
    about/about
    about/team
+   about/accessibility
 
 .. toctree::
    :maxdepth: 1
