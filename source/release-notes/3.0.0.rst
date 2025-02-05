@@ -208,3 +208,17 @@ Changelog
 - Implement a basic backup system
 - Correct emails to follow RFC 5322
 - Fix issues with editing Docker settings
+
+v3.0.0 - Release Candidate 9
+============================
+
+Changelog
+#########
+- Additional fixes to get SFTP working for admins
+- Resolve security issue discovered during refactor
+- Add unit test to ensure SFTP works
+- Remove server name required to be unique
+- Correct registration toggle displaying when disabled
+- Adjust UI for wider screens
+- Adjustments to attempt to auto-resolve volumes for when panel is running in Docker
+- Have migrator dump templates which are not valid to a file
