@@ -222,3 +222,11 @@ Changelog
 - Adjust UI for wider screens
 - Adjustments to attempt to auto-resolve volumes for when panel is running in Docker
 - Have migrator dump templates which are not valid to a file
+
+v3.0.0 - Release Candidate 10
+============================
+
+Changelog
+#########
+- Resolve issue creating new accounts
+- Allow editing/deleting of files with non-standard characters through UI
