@@ -230,3 +230,19 @@ Changelog
 #########
 - Resolve issue creating new accounts
 - Allow editing/deleting of files with non-standard characters through UI
+
+v3.0.0 - Release Candidate 11
+
+Changelog
+#########
+- Expose config to change cookies settings, change secure to false by default
+- Force Docker settings to reload when admins edit a server
+- Expose test button for emails
+- Clean up email system and update to a more supported library
+- Expose way to disable host environment when using Docker
+- Additional scheduler improvements
+- Add stdin to execute a command within a server
+- Add debug option to log SFTP commands for when a client fails to properly work
+- Update DepotDownloader to support Lancache servers
+- Add CLI option to remove 2FA off of an account
+- Fix install script to create home
