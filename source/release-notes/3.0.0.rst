@@ -232,6 +232,7 @@ Changelog
 - Allow editing/deleting of files with non-standard characters through UI
 
 v3.0.0 - Release Candidate 11
+=============================
 
 Changelog
 #########
