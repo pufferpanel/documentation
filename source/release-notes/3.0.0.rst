@@ -247,3 +247,15 @@ Changelog
 - Update DepotDownloader to support Lancache servers
 - Add CLI option to remove 2FA off of an account
 - Fix install script to create home
+
+v3.0.0 - Release Candidate 12
+=============================
+
+Changelog
+#########
+- Fix user creation to ensure home directory is managed
+- Fix cookie settings to work for non-http usage
+- Enable ARM64 RPM builds
+- Fix CPU calculation for Docker based on documentation
+- Fix disallow host config option to correctly remove the option in the UI
+- Fix UI to properly allow changing flags if no data is defined
