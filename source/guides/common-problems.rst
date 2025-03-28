@@ -48,7 +48,13 @@ This is due to the version of “Depot Downloader” in use being outdated, even
   This needs to be ran as root.
 
 .. code-block:: console
-
-    curl https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.4/DepotDownloader-linux-x64.zip -L -o /tmp/dd.zip && unzip /tmp/dd.zip -d /tmp/dd && rm /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader && mv /tmp/dd/DepotDownloader /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader && chown pufferpanel:pufferpanel /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader && rm -r /tmp/dd.zip /tmp/dd
+    
+    export DD_VERSION=3.1.0
+    curl https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_$DD_VERSION/DepotDownloader-linux-x64.zip -L -o /tmp/dd.zip
+    unzip /tmp/dd.zip -d /tmp/dd
+    rm /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader
+    mv /tmp/dd/DepotDownloader /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader
+    chown pufferpanel:pufferpanel /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader
+    rm -r /tmp/dd.zip /tmp/dd
 
 Otherwise, you can use “Depo Downloader” or SteamCMD outside PufferPanel to get the server files and SFTP them to the PufferPanel server to get around the installation button.
