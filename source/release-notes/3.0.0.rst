@@ -269,7 +269,3 @@ Changelog
 - Fix resolvers for Forge and Neo to not fail if folders don't exist
 - Fix TOTP to support Enter key and better detection of entered codes
 - Fix Chrome adding scrollbars in bad locations
-
-BREAKING:
-Due to Ubuntu 20.04 becoming EOL, we will no longer build against this. 
-Ubuntu 22.04 will be the lowest version that we can support.
