@@ -16,7 +16,7 @@ System Requirements
 +------------------------+-------+-------+-------+
 | OS/Version             | AMD64 | ARM64 | AMD32 |
 +========================+=======+=======+=======+
-| Ubuntu Focal (20.04)   | Yes   | Yes   | No    |
+| Ubuntu Focal (20.04)   | No    | No    | No    |
 +------------------------+-------+-------+-------+
 | Ubuntu Jammy (22.04)   | Yes   | Yes   | No    |
 +------------------------+-------+-------+-------+
@@ -30,6 +30,11 @@ System Requirements
 +------------------------+-------+-------+-------+
 | Raspbian Bullseye (11) | No    | Yes   | Yes   |
 +------------------------+-------+-------+-------+
+
+.. warning::
+   Ubuntu 20.04 hits End-Of-Life in April 2025. As such, we will no longer build against this version.
+   v3 will no longer work on Ubuntu 20.04
+   
 
 Ports
 -----
