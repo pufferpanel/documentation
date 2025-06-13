@@ -83,17 +83,6 @@ For easiest installation, if you have one of the listed supported distributions,
     metadata_expire=300" > sudo tee /etc/yum.repos.d/pufferpanel.repo
       sudo yum install pufferpanel
 
-.. tab:: Windows - Self Service
-
-  .. warning::
-    Windows installations of PufferPanel are an _advanced_ feature, do not expect any support to be provided.
-
-    Windows builds are provided on our GitHub, these builds are provided as an advanced option for experienced administrators who have exhausted all other avenues of getting software running on Linux.
-
-    Consequently, we expect users to self-service these installations.
-
-    `Windows builds can be found here, on our releases page <https://github.com/pufferpanel/pufferpanel/releases>`_
-
 
 Adding an admin
 ---------------
@@ -112,11 +101,26 @@ Starting the panel
 
    sudo systemctl enable --now pufferpanel
 
+
 --------------------
 Managing the service
 --------------------
 
 PufferPanel uses Systemd to manage the service, consult the man page `man systemctl` or `a guide <https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units>`_ for instructions on how to use it.
+
+
+----------------
+Securing Servers
+----------------
+
+Servers can run in several different environments depending on the security required. It is *HIGHLY* recommended to configure and use Docker
+for your servers as this will result in better file and process protection.
+
+Refer to :doc:`Using Docker with PufferPanel <docker>` to configure Docker so that PufferPanel can use it.
+
+Using "standard" is *NOT* a secure environment, and WILL result in servers being able to access host files. This should *ONLY* be used for testing
+purposes and not for live servers.
+
 
 Done!
 -----
