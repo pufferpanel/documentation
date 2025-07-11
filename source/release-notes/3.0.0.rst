@@ -1,5 +1,250 @@
-v3.0.0 - Release Candidate
+This contains the full changelog of the 3.0.0 release cycle.
+
+v3.0.0 - Release Candidate 14
+=============================
+
+This is a significant update compared to the previous releases.
+
+This release candidate contains a "breaking" change in regards to how
+servers are launched in order to reduce "concerns" about servers and
+their access to files using a tool called unshare.
+
+**Note, this does NOT make it a replacement for Docker**
+
+Servers which use the "host" environment will now run in an unshare
+environment structure. This will attempt to isolate the server from the
+host files, however note that this is NOT perfect. It cannot fully
+isolate servers, so there are some files that might be accessible that
+is not desired. If perfect isolation is desired, use Docker as the environment.
+
+Should a server have issues with unshare, the "disableUnshare" flag may be set
+to "true" in the server's environment definition to disable unshare for that
+server. Alternatively, should the host machine have issues with unshare, the
+system can be entirely disabled by setting the "security.disableUnshare" in
+the panel config to "true".
+
+This also removes the Windows build. While they were provided as a "no-support",
+it is simply easier to stop providing them.
+
+Changelog
+#########
+- Change host environment to use unshare by default
+- Adjust error message for when CurseForge project does not have 3rd party support enabled
+- Add options for setting trusted proxies so logs can have correct IPs
+- Fix TOTP field
+- Add better error message for when a template cannot be used
+- Update CLI lib so the command-line interface has an updated look and feel
+- Remove Windows
+
+
+v3.0.0 - Release Candidate 13
+=============================
+
+Changelog
+#########
+- Fix issues with CurseForge template not properly resolving variables
+- Fix resolvers for Forge and Neo to not fail if folders don't exist
+- Fix TOTP to support Enter key and better detection of entered codes
+- Fix Chrome adding scrollbars in bad locations
+
+
+v3.0.0 - Release Candidate 12
+=============================
+
+Changelog
+#########
+- Fix user creation to ensure home directory is managed
+- Fix cookie settings to work for non-http usage
+- Enable ARM64 RPM builds
+- Fix CPU calculation for Docker based on documentation
+- Fix disallow host config option to correctly remove the option in the UI
+- Fix UI to properly allow changing flags if no data is defined
+
+
+v3.0.0 - Release Candidate 11
+=============================
+
+Changelog
+#########
+- Expose config to change cookies settings, change secure to false by default
+- Force Docker settings to reload when admins edit a server
+- Expose test button for emails
+- Clean up email system and update to a more supported library
+- Expose way to disable host environment when using Docker
+- Additional scheduler improvements
+- Add stdin to execute a command within a server
+- Add debug option to log SFTP commands for when a client fails to properly work
+- Update DepotDownloader to support Lancache servers
+- Add CLI option to remove 2FA off of an account
+- Fix install script to create home
+
+
+v3.0.0 - Release Candidate 10
+=============================
+
+Changelog
+#########
+- Resolve issue creating new accounts
+- Allow editing/deleting of files with non-standard characters through UI
+
+
+v3.0.0 - Release Candidate 9
 ============================
+
+Changelog
+#########
+- Additional fixes to get SFTP working for admins
+- Resolve security issue discovered during refactor
+- Add unit test to ensure SFTP works
+- Remove server name required to be unique
+- Correct registration toggle displaying when disabled
+- Adjust UI for wider screens
+- Adjustments to attempt to auto-resolve volumes for when panel is running in Docker
+- Have migrator dump templates which are not valid to a file
+
+
+v3.0.0 - Release Candidate 7
+============================
+
+Changelog
+#########
+- Update DepotDownloader to resolve Steam download issues
+- Correct issues with migrating data
+- Update CurseForge runners to support NeoForge-based modpacks
+- Use ServerStarter for NeoForge-based servers
+- Fix permissions so admins can SFTP into servers they are not explicitly defined in
+- Implement a basic backup system
+- Correct emails to follow RFC 5322
+- Fix issues with editing Docker settings
+
+
+v3.0.0 - Release Candidate 3
+============================
+
+Changelog
+#########
+- Add display for JCMD stats
+- Resolve issues with migrations for Postgres and MySQL
+- Fix issue with local node message appearing for non-local nodes
+
+
+v3.0.0 - Release Candidate 2
+============================
+
+Changelog
+#########
+- Fix console from swallowing messages when using HTTP fallback
+- Fix updating nodes
+- Fix pipeline to properly set CurseForge key
+- Add support for Docker labels
+- Fix password validation to now be consistent across CLI and web
+- Fix checking for running Docker container to be explicit
+- Validate server is not running when deleting the server
+- Return specific error when account is not permitted to log in
+- Add JCMD support. Allows for getting memory usage from within Java, instead of just what the OS sees.
+- Fix server edit to avoid creating a duplicate node
+
+
+v3.0.0 - Release Candidate 1
+============================
+
+Changelog
+#########
+- Fix CurseForge operation to handle parsing variables.txt with comments
+- Add translation key for missing operator
+
+
+v3.0.0 - Alpha 10
+=================
+
+Changelog
+#########
+- Fix the UI and backend for saving docker settings including port bindings
+
+
+v3.0.0 - Alpha 9
+================
+
+Changelog
+#########
+- Fix issues related to migration for MySQL
+
+
+v3.0.0 - Alpha 8
+================
+
+Changelog
+#########
+- Resolve issues with remote nodes and SFTP access
+
+
+v3.0.0 - Alpha 7
+================
+
+Changelog
+#########
+
+- Fix openvz support for openat with really old kernels
+- Add tooltips to icons
+- Fix migrations for clients from v2
+- Expose better UI for managing admin-level variables
+- Add mask to password for email settings
+
+
+v3.0.0 - Alpha 6
+================
+
+Changelog
+#########
+
+- Fix GORM and it's method of doing updates
+
+v3.0.0 - Alpha 5
+================
+
+Changelog
+#########
+
+- Fix SFTP UI to use URI encoding for the "Open" button
+- Have extraction of archives override existing files
+- Clean up archive management to use a central codebase
+- Fix console endpoint to handle avoid duping lines as much
+- Fix file manager to create zips on the root and wait for them to finish
+
+
+v3.0.0 - Alpha 4
+================
+
+Changelog
+#########
+
+- Fix openat2 checking
+- Allow openat2 usage to be controlled via config
+- Have install run migrations instead of being done at user creation
+- Apply additional fixes that were done on v2
+
+
+v3.0.0 - Alpha 3
+================
+
+Changelog
+#########
+
+- This fixes the Docker images so now they are properly tagged for arm64 and amd64 using the same tag (pufferpanel/pufferpanel:v3.0.0-alpha.3)
+
+
+v3.0.0 - Alpha 2
+================
+
+Changelog
+#########
+
+- Fix SFTP for local nodes not using the new naming scheme and using an invalid check
+- Correct local nodes to pull their hostname from the config
+
+
+v3.0.0 - Alpha 1
+================
 
 This marks the release candidates of v3.0.0. This release has been years in the making.
 It comes with significant changes to the backend and frontend to ensure a smoother experience.
@@ -43,12 +288,8 @@ they function prior to being released. Generally speaking, the templates now hav
 validated to run and not crash immediately. This does mean we have removed several templates that 
 either were not functional or were believed to be dead software.
 
-Full Changelog
-^^^^^^^^^^^^^^
-
-UI
-""
-
+UI Changes
+##########
 * Improved flow for server creation, steps are a bit more fluid. Install is also prompted after
   creation to help bring this action to the front.
 * Server UI will show a game server icon to help quickly identify a server type. This is controlled
@@ -65,8 +306,7 @@ UI
 * Numerous bug fixes and code clean-ups
 
 Backend
-"""""""
-
+#######
 * Templates can now directly pull from CurseForge. A key is provided by default so servers can be
   created from modpacks from CurseForge. The panel will attempt to set up the server to the best of
   it's ability.
@@ -79,193 +319,3 @@ Backend
 * Better hooks into systemd. We will now report that we are starting up/shutting down to systemd.
 * Docker image names now support variable replacements
 * Numerous bug fixes and code clean-ups
-
-
-v3.0.0 - Alpha 2
-================
-
-Changelog
-#########
-
-- Fix SFTP for local nodes not using the new naming scheme and using an invalid check
-- Correct local nodes to pull their hostname from the config
-
-v3.0.0 - Alpha 3
-================
-
-Changelog
-#########
-
-- This fixes the Docker images so now they are properly tagged for arm64 and amd64 using the same tag (pufferpanel/pufferpanel:v3.0.0-alpha.3)
-
-v3.0.0 - Alpha 4
-================
-
-Changelog
-#########
-
-- Fix openat2 checking
-- Allow openat2 usage to be controlled via config
-- Have install run migrations instead of being done at user creation
-- Apply additional fixes that were done on v2
-
-v3.0.0 - Alpha 5
-================
-
-Changelog
-#########
-
-- Fix SFTP UI to use URI encoding for the "Open" button
-- Have extraction of archives override existing files
-- Clean up archive management to use a central codebase
-- Fix console endpoint to handle avoid duping lines as much
-- Fix file manager to create zips on the root and wait for them to finish
-
-v3.0.0 - Alpha 6
-================
-
-Changelog
-#########
-
-- Fix GORM and it's method of doing updates
-
-v3.0.0 - Alpha 7
-================
-
-Changelog
-#########
-
-- Fix openvz support for openat with really old kernels
-- Add tooltips to icons
-- Fix migrations for clients from v2
-- Expose better UI for managing admin-level variables
-- Add mask to password for email settings
-
-v3.0.0 - Alpha 8
-================
-
-Changelog
-#########
-- Resolve issues with remote nodes and SFTP access
-
-v3.0.0 - Alpha 9
-================
-
-Changelog
-#########
-- Fix issues related to migration for MySQL
-
-v3.0.0 - Alpha 10
-=================
-
-Changelog
-#########
-- Fix the UI and backend for saving docker settings including port bindings
-
-v3.0.0 - Release Candidate 1
-============================
-
-Changelog
-#########
-- Fix CurseForge operation to handle parsing variables.txt with comments
-- Add translation key for missing operator
-
-v3.0.0 - Release Candidate 2
-============================
-
-Changelog
-#########
-- Fix console from swallowing messages when using HTTP fallback
-- Fix updating nodes
-- Fix pipeline to properly set CurseForge key
-- Add support for Docker labels
-- Fix password validation to now be consistent across CLI and web
-- Fix checking for running Docker container to be explicit
-- Validate server is not running when deleting the server
-- Return specific error when account is not permitted to log in
-- Add JCMD support. Allows for getting memory usage from within Java, instead of just what the OS sees.
-- Fix server edit to avoid creating a duplicate node
-
-v3.0.0 - Release Candidate 3
-============================
-
-Changelog
-#########
-- Add display for JCMD stats
-- Resolve issues with migrations for Postgres and MySQL
-- Fix issue with local node message appearing for non-local nodes
-
-v3.0.0 - Release Candidate 7
-============================
-
-Changelog
-#########
-- Update DepotDownloader to resolve Steam download issues
-- Correct issues with migrating data
-- Update CurseForge runners to support NeoForge-based modpacks
-- Use ServerStarter for NeoForge-based servers
-- Fix permissions so admins can SFTP into servers they are not explicitly defined in
-- Implement a basic backup system
-- Correct emails to follow RFC 5322
-- Fix issues with editing Docker settings
-
-v3.0.0 - Release Candidate 9
-============================
-
-Changelog
-#########
-- Additional fixes to get SFTP working for admins
-- Resolve security issue discovered during refactor
-- Add unit test to ensure SFTP works
-- Remove server name required to be unique
-- Correct registration toggle displaying when disabled
-- Adjust UI for wider screens
-- Adjustments to attempt to auto-resolve volumes for when panel is running in Docker
-- Have migrator dump templates which are not valid to a file
-
-v3.0.0 - Release Candidate 10
-============================
-
-Changelog
-#########
-- Resolve issue creating new accounts
-- Allow editing/deleting of files with non-standard characters through UI
-
-v3.0.0 - Release Candidate 11
-=============================
-
-Changelog
-#########
-- Expose config to change cookies settings, change secure to false by default
-- Force Docker settings to reload when admins edit a server
-- Expose test button for emails
-- Clean up email system and update to a more supported library
-- Expose way to disable host environment when using Docker
-- Additional scheduler improvements
-- Add stdin to execute a command within a server
-- Add debug option to log SFTP commands for when a client fails to properly work
-- Update DepotDownloader to support Lancache servers
-- Add CLI option to remove 2FA off of an account
-- Fix install script to create home
-
-v3.0.0 - Release Candidate 12
-=============================
-
-Changelog
-#########
-- Fix user creation to ensure home directory is managed
-- Fix cookie settings to work for non-http usage
-- Enable ARM64 RPM builds
-- Fix CPU calculation for Docker based on documentation
-- Fix disallow host config option to correctly remove the option in the UI
-- Fix UI to properly allow changing flags if no data is defined
-
-v3.0.0 - Release Candidate 13
-=============================
-
-Changelog
-#########
-- Fix issues with CurseForge template not properly resolving variables
-- Fix resolvers for Forge and Neo to not fail if folders don't exist
-- Fix TOTP to support Enter key and better detection of entered codes
-- Fix Chrome adding scrollbars in bad locations
