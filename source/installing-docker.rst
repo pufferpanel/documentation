@@ -6,23 +6,66 @@ Installing PufferPanel using Docker
    The Docker image is currently X86_64 only due to limitations in the Github Actions infrastructure.
 
 PufferPanel offers several images that include dependencies needed to run game servers. 
-We recommend using *latest* as it contains everything you will need to get servers runing quickly.
+We recommend using *latest* as it contains everything you will need to get servers running quickly.
 
-Creating the container
-----------------------
+Creating volumes
+----------------
 
-To create the container, start it, and add the default user:
+Before creating the container, you need to create two Docker volumes: one for configuration and one for game data.
+
+Volumes ensure that your PufferPanel configuration and game server data are preserved even if the container is recreated or updated. 
+Without them, all files stored inside the container would be lost. 
+With volumes, your settings, game servers, and files persist across upgrades and restarts.
+
+To create the config and data volumes use the following commands:
 
 .. code-block:: bash
 
-    $ mkdir -p /var/lib/pufferpanel
     $ docker volume create pufferpanel-config
-    $ docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel -v /var/run/docker.sock:/var/run/docker.sock --restart=on-failure pufferpanel/pufferpanel:latest
-    $ docker start pufferpanel
-    $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
-    
-And you're done. Your panel is now accessible at http://localhost:8080
+    $ docker volume create pufferpanel-data
 
+Creating the container
+----------------------
+Once the volumes are ready, create your container.
+
+Keep in mind that If you want your servers to be accessible from outside the host machine, you must bind the ports 
+to the host using the -p host_port:container_port option.
+
+.. code-block:: bash
+
+    $ docker create --name pufferpanel \
+        -p 8080:8080 -p 5657:5657 \
+        -v pufferpanel-config:/etc/pufferpanel \
+        -v pufferpanel-data:/var/lib/pufferpanel \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        --restart=on-failure \
+        pufferpanel/pufferpanel:latest
+    
+- 8080:8080 → exposes the PufferPanel web UI (required, so you can access the web UI)
+- 5657:5657 → daemon port used by PufferPanel (optional, only needed if other machines should connect to this daemon)
+- Add more -p host:container pairs for any game server ports you want reachable from outside
+
+Start the container
+-------------------
+Once the container is created you can start it by running the following command:
+
+.. code-block:: bash
+
+    $ docker start pufferpanel
+
+Add user to the container
+-------------------------
+Finally, create an admin user to manage PufferPanel:
+
+.. code-block:: bash
+
+    $ docker exec -it pufferpanel /pufferpanel/pufferpanel user add
+
+Congratulations! 🎉
+
+Your PufferPanel instance is now up and running.
+
+You can access the web interface at: http://localhost:8080
 
 Understanding the config
 ------------------------
