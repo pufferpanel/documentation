@@ -42,8 +42,9 @@ to the host using the -p host_port:container_port option.
         pufferpanel/pufferpanel:latest
     
 - 8080:8080 → exposes the PufferPanel web UI (required, so you can access the web UI)
-- 5657:5657 → daemon port used by PufferPanel (optional, only needed if other machines should connect to this daemon)
+- 5657:5657 → SFTP port used by PufferPanel (optional but recommended: used to allow file transfers such as when `importing a minecraft server <https://docs.pufferpanel.com/en/2.x/guides/import-minecraft-server.html>`_)
 - Add more -p host:container pairs for any game server ports you want reachable from outside
+
 
 Start the container
 -------------------
