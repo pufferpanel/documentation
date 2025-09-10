@@ -1,6 +1,6 @@
 This contains the full changelog of the 3.0.0 release cycle.
 
-v3.0.0 - Release Candidate 14
+v3.0.0 - Release Candidate 15
 =============================
 
 This is a significant update compared to the previous releases.
@@ -35,6 +35,9 @@ Changelog
 - Add better error message for when a template cannot be used
 - Update CLI lib so the command-line interface has an updated look and feel
 - Remove Windows
+- Disable special stats when installing servers, resolves issues with FTB installer
+- Add recovery tokens for 2FA credentials
+- Improve stat chart interactions
 
 
 v3.0.0 - Release Candidate 13
