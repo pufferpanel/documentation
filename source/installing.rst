@@ -129,6 +129,6 @@ And that's it! Your panel is now available on port 8080 of your server.
 
 Additional resources:
 
-* :doc:`Enabling SSL with Nginx <guides/ssl-setup-nginx>`
+* :doc:`Enabling SSL with Nginx <guides/proxy/40.ssl-setup-nginx>`
 * :doc:`Running servers without Docker <environments/standard>`
 * :doc:`Running servers with Docker <environments/docker>`
