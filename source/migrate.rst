@@ -71,7 +71,7 @@ Run the following to update the panel:
       systemctl restart pufferpanel
 
 Stop Nodes
-^^^^
+^^^^^^^^^^
 
 On each node, run `systemctl stop pufferpanel`
 
