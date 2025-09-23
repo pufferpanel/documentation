@@ -12,7 +12,7 @@ release = u'3.x'
 #
 # needs_sphinx = '1.0'
 
-extensions = ['sphinx_inline_tabs', 'sphinx_copybutton', 'notfound.extension']
+extensions = ['sphinx_inline_tabs', 'sphinx_copybutton', 'notfound.extension', 'sphinx_last_updated_by_git']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -123,3 +123,7 @@ notfound_context = {
     'title': 'Fish not found',
     'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
 }
+
+# Exclude files from having last update dates injected
+# this is relative to the source directory
+git_exclude_patterns = ['index.rst']
