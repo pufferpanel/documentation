@@ -1,7 +1,41 @@
+v3.0.0
+======
+
+V3.0.0 brings about a large change compared to the V2 releases.
+These changes range from just basic UI updates to full-on changes to how
+things function with servers. These changes are based on feedback and a 
+better understanding of how things are used. V2 was a drastic change from
+it's previous version, and V3 is no different.
+
+Below is a list of the larger changes:
+
+- UI overhauled across the board. The changes were made based on new features 
+  being available 
+- Community templates are now stored in GitHub and pulled from there when used,
+  instead of being copied locally
+- Host environment is ran using unshare, to help improve server security. This
+  can be disabled on the server or daemon level. It is recommended to only disable
+  it on a server if the server requires accessing files from another server.
+- Telnet and RCON is now supported for game servers that require it for commands
+- Windows support is now fully removed
+- Stats for Java-based servers are now shown, providing better visibility into the server
+- DepotDownloader will download the latest version of the tool
+- SFTP usernames have been updated to use characters that should not cause issues with
+  other clients or tools
+- NeoForge is now an available operator
+- Admins can SFTP to servers without being explicitly defined
+- By default, if the panel is installed using Docker, only Docker will be available for
+  servers
+- Operations in templates now support conditions
+- A basic backup system. This just makes a compressed copy of the server and stores it on
+  the disk in a specified path in the config. It is recommended to have this path be a
+  network drive/folder so that backups are not lost if the machine does fail.
+
+
 This contains the full changelog of the 3.0.0 release cycle.
 
 v3.0.0 - Release Candidate 15
-=============================
+-----------------------------
 
 This is a significant update compared to the previous releases.
 
@@ -41,7 +75,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 13
-=============================
+-----------------------------
 
 Changelog
 #########
@@ -52,7 +86,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 12
-=============================
+-----------------------------
 
 Changelog
 #########
@@ -65,7 +99,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 11
-=============================
+-----------------------------
 
 Changelog
 #########
@@ -83,7 +117,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 10
-=============================
+-----------------------------
 
 Changelog
 #########
@@ -92,7 +126,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 9
-============================
+----------------------------
 
 Changelog
 #########
@@ -107,7 +141,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 7
-============================
+----------------------------
 
 Changelog
 #########
@@ -122,7 +156,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 3
-============================
+----------------------------
 
 Changelog
 #########
@@ -132,7 +166,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 2
-============================
+----------------------------
 
 Changelog
 #########
@@ -149,7 +183,7 @@ Changelog
 
 
 v3.0.0 - Release Candidate 1
-============================
+----------------------------
 
 Changelog
 #########
@@ -158,7 +192,7 @@ Changelog
 
 
 v3.0.0 - Alpha 10
-=================
+-----------------
 
 Changelog
 #########
@@ -166,7 +200,7 @@ Changelog
 
 
 v3.0.0 - Alpha 9
-================
+----------------
 
 Changelog
 #########
@@ -174,7 +208,7 @@ Changelog
 
 
 v3.0.0 - Alpha 8
-================
+----------------
 
 Changelog
 #########
@@ -182,7 +216,7 @@ Changelog
 
 
 v3.0.0 - Alpha 7
-================
+----------------
 
 Changelog
 #########
@@ -195,7 +229,7 @@ Changelog
 
 
 v3.0.0 - Alpha 6
-================
+----------------
 
 Changelog
 #########
@@ -203,7 +237,7 @@ Changelog
 - Fix GORM and it's method of doing updates
 
 v3.0.0 - Alpha 5
-================
+----------------
 
 Changelog
 #########
@@ -216,7 +250,7 @@ Changelog
 
 
 v3.0.0 - Alpha 4
-================
+----------------
 
 Changelog
 #########
@@ -228,7 +262,7 @@ Changelog
 
 
 v3.0.0 - Alpha 3
-================
+----------------
 
 Changelog
 #########
@@ -237,7 +271,7 @@ Changelog
 
 
 v3.0.0 - Alpha 2
-================
+----------------
 
 Changelog
 #########
@@ -247,7 +281,7 @@ Changelog
 
 
 v3.0.0 - Alpha 1
-================
+----------------
 
 This marks the release candidates of v3.0.0. This release has been years in the making.
 It comes with significant changes to the backend and frontend to ensure a smoother experience.
@@ -263,7 +297,7 @@ documentation to try to be more complete. Do note however it may still be missin
 
 Templates have also been updated with the new concept of "conditions". This is a basic "if" 
 statement system that is designed to help consolidate our templates and drive better logic about
-if an operator should run. Things that the conditions now supporthttps://github.com/pufferpanel/documentation/tree/3.x/source/release-notes are checking if a variable is 
+if an operator should run. Things that the conditions now support are checking if a variable is 
 set or if it's a certain value, if a file exist, or if something is in the PATH env. This means 
 our templates now can support both environments at the same time, with the conditions driving 
 what operators may be used.
