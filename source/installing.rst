@@ -63,7 +63,7 @@ For easiest installation, if you have one of the listed supported distributions,
 
    .. code-block:: bash
 
-      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" > sudo tee /etc/apt/sources.list.d/pufferpanel.list
+      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" | sudo tee /etc/apt/sources.list.d/pufferpanel.list
       sudo apt update
       sudo apt-get install pufferpanel
 
