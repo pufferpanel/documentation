@@ -13,43 +13,35 @@ PufferPanel - Open Source Game Server Management
 .. toctree::
    :maxdepth: 1
    :caption: Environments
+   :glob:
 
-   environments/docker
-   environments/standard
+   environments/**
 
 .. toctree::
    :maxdepth: 1
    :caption: Guides
+   :glob:
 
-   guides/nginx
-   guides/apache
-   guides/caddy
-   guides/database
-   guides/ssl-setup-nginx
-   guides/email
-   templates/templates
-   guides/contributing
-   guides/import-minecraft-server
-   guides/themes/installing
-   guides/themes/creating
-   guides/create-node
-   guides/common-problems
-   guides/getting-help
+   guides/proxy/*
+   guides/advanced-setup/*
+   guides/*
+   guides/themes/*
+   templates/**
+   guides/help/*
 
 .. toctree::
    :maxdepth: 1
    :caption: About
+   :glob:
 
-   about/about
-   about/team
-   about/accessibility
+   about/**
 
 .. toctree::
    :maxdepth: 1
    :caption: Game specific guides
+   :glob:
 
-   games/sourceds/autoupdate
-   games/srcds/dependencies
+   games/**
 
 .. toctree::
    :maxdepth: 1
