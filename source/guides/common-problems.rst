@@ -49,7 +49,7 @@ This is due to the version of “Depot Downloader” in use being outdated, even
 
 .. code-block:: console
     
-    export DD_VERSION=3.1.0
+    export DD_VERSION=3.4.0
     curl https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_$DD_VERSION/DepotDownloader-linux-x64.zip -L -o /tmp/dd.zip
     unzip /tmp/dd.zip -d /tmp/dd
     rm /var/lib/pufferpanel/binaries/depotdownloader/DepotDownloader
