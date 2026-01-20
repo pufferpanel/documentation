@@ -1,11 +1,6 @@
 Installing PufferPanel
 ======================
 
-.. danger::
-
-   3.x IS RELEASE CANDIDATE. THIS MEANS THERE WILL BE BUGS! USE AT YOUR OWN RISK.
-
-
 System Requirements
 -------------------
 
