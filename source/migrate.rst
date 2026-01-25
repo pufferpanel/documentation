@@ -75,6 +75,7 @@ Stop Nodes
 
 On each node, run `systemctl stop pufferpanel`
 
+**Note that if any old nodes are left running you will not be able to log into the panel to download the configuration files necessary to update them.**
 
 Deploy New Configs
 ^^^^^^^^^^^^^^^^^^
