@@ -1,0 +1,6 @@
+v3.0.2
+======
+
+- Fix docker stop not actually gracefully shutting down the panel or servers
+- Update paperdl operator to support downloading Velocity
+- Attempt to fix password managers not functioning on login screen fully
