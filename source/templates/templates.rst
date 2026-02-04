@@ -167,3 +167,47 @@ Writes text into a file, including writing the value of defined variables such a
     "text": "server-ip=${ip}\nserver-port=${port}\n",
     "target": "server.properties"
   }
+
+
+Functions
+---------
+
+The "conditions" for an operator to run support additional functions that are not exposed by the existing library.
+The library we use for the conditions is cel, the spec of which is located here: https://github.com/google/cel-spec/blob/master/doc/langdef.md
+
+Additionally, PufferPanel exposes extra functions to assist with writing conditions.
+
+file_exists
+^^^^^^^^^^^
+
+Checks to see if a file or path exists
+
+Parameters:
+- String: Filename/path
+
+Result:
+- Boolean: True if file exists, False otherwise
+
+
+in_path
+^^^^^^^
+
+Checks to see if the given "binary" is in the PATH
+
+Parameters:
+- String: Command name
+
+Result:
+- Boolean: True if in the PATH, False otherwise
+
+
+is_server_running
+^^^^^^^^^^^^^^^^^
+
+Returns whether or not the server is running
+
+Parameters:
+- None
+
+Result:
+- Boolean: True if the server is running, False otherwise
