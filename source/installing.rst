@@ -39,34 +39,30 @@ Installing
 
 For easiest installation, if you have one of the listed supported distributions, you can simply install our package and get going!.
 
-.. tab:: DEB-based
-
-   .. code-block:: bash
-
-      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh?any=true | sudo bash
-      sudo apt update
-      sudo apt-get install pufferpanel
-
-.. tab:: RPM-based
-
-   .. code-block:: bash
-
-      curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.rpm.sh?any=true | sudo bash
-      sudo yum install pufferpanel
-
 .. tab:: Ubuntu/Debian - Manual Repo
 
    .. code-block:: bash
 
-      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" > sudo tee /etc/apt/sources.list.d/pufferpanel.list
+      sudo apt-get install curl gnupg apt-transport-https
+
+      curl -fsSL https://packagecloud.io/pufferpanel/pufferpanel/gpgkey | gpg --dearmor | sudo tee /etc/apt/keyrings/pufferpanel.gpg > /dev/null
+
+      echo "X-Repolib-Name: PufferPanel
+      Types: deb
+      URIs: https://packagecloud.io/pufferpanel/pufferpanel/any/
+      Suites: any
+      Components: main
+      Signed-By: /etc/apt/keyrings/pufferpanel.gpg" | sudo tee /etc/apt/sources.list.d/pufferpanel.sources > /dev/null
+
       sudo apt update
+
       sudo apt-get install pufferpanel
 
 .. tab:: Red-Hat - Manual Repo
 
    .. code-block:: bash
 
-      echo "   [pufferpanel]
+      echo "[pufferpanel]
     name=pufferpanel
     baseurl=https://packagecloud.io/pufferpanel/pufferpanel/rpm_any/rpm_any/$basearch
     repo_gpgcheck=1
@@ -75,26 +71,59 @@ For easiest installation, if you have one of the listed supported distributions,
     gpgkey=https://packagecloud.io/pufferpanel/pufferpanel/gpgkey
     sslverify=1
     sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-    metadata_expire=300" > sudo tee /etc/yum.repos.d/pufferpanel.repo
+    metadata_expire=300" | sudo tee /etc/yum.repos.d/pufferpanel.repo > /dev/null
+
       sudo yum install pufferpanel
 
+.. tab:: Docker
+
+   .. code-block:: bash
+
+      docker volume create pufferpanel-config
+
+      docker volume create pufferpanel-servers
+      
+      docker create --name pufferpanel \
+                     -p 8080:8080 -p 5657:5657 \
+                     -v pufferpanel-config:/etc/pufferpanel \
+                     -v pufferpanel-servers:/var/lib/pufferpanel:z \
+                     -v /var/run/docker.sock:/var/run/docker.sock \
+                     --restart=on-failure \
+                     pufferpanel/pufferpanel:latest
 
 Adding an admin
 ---------------
 
 To create your first user, run the following command. Be sure to enter "Y" when it asks if this is an admin so you can fully use your panel.
 
-.. code:: bash
+.. tab:: Host
 
-   sudo pufferpanel user add
+   .. code:: bash
+
+      sudo pufferpanel user add
+
+.. tab:: Docker
+
+   .. code:: bash
+
+      docker start pufferpanel
+      docker exec -it pufferpanel pufferpanel user add
 
 
 Starting the panel
 ------------------
 
-.. code:: bash
+.. tab:: Host
 
-   sudo systemctl enable --now pufferpanel
+   .. code:: bash
+
+      sudo systemctl enable --now pufferpanel
+
+.. tab:: Docker
+
+   .. code:: bash
+
+      docker start pufferpanel
 
 
 --------------------
