@@ -107,7 +107,7 @@ To create your first user, run the following command. Be sure to enter "Y" when 
    .. code:: bash
 
       docker start pufferpanel
-      docker exec -it pufferpanel pufferpanel user add
+      docker exec -it pufferpanel /pufferpanel/bin/pufferpanel user add
 
 
 Starting the panel
