@@ -1,0 +1,8 @@
+v3.0.4
+======
+
+- Fix issue with downloading files from local node causing large memory usage
+- Add backgrounds to server lists
+- Switch to using "sh" instead of "bash" for starting servers
+- Add missing operators to UI
+- Attempt to resolve issues with post tasks causing incorrect and inconsistent behavior
