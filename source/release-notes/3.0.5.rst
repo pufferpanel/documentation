@@ -1,0 +1,5 @@
+v3.0.4
+======
+
+- Revert sh instead of bash usage. This caused issues with signals not being
+  passed downstream, and servers would fail to start due.
