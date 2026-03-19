@@ -40,7 +40,7 @@ The run section defines what happens when the start and stop buttons are pressed
 
 * **stop** - Command to send to the console of the running server to stop it
 * **pre** - Processors to run before the server starts
-* **post** - Processors to run after the server starts
+* **post** - Processors to run after the server exits
 * **command** - Command to run that runs the actual server
 * **environmentVars** - Any environment variables to set for this server
 
