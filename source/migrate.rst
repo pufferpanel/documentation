@@ -33,7 +33,7 @@ Install new repository
 
    .. code-block:: bash
 
-      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" > sudo tee /etc/apt/sources.list.d/pufferpanel.list
+      echo "deb https://packagecloud.io/pufferpanel/pufferpanel/any/ any main" | sudo tee /etc/apt/sources.list.d/pufferpanel.list
       sudo apt update
 
 .. tab:: Red-Hat - Manual Repo
