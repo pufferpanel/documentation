@@ -27,6 +27,7 @@ PufferPanel - Open Source Game Server Management
    guides/database
    guides/ssl-setup-nginx
    guides/email
+   guides/config
    templates/templates
    guides/contributing
    guides/import-minecraft-server
