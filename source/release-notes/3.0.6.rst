@@ -1,0 +1,5 @@
+v3.0.6
+======
+
+- Fix working directory not being set correctly when using "host" environment and setting a custom working directory
+- Fix issue where long numerics would not properly convert

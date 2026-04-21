@@ -1,0 +1,7 @@
+v3.0.7
+======
+
+- Change access to certain folders to be read-only
+- Increase column size for templates to hold very large templates
+- Fix a race condition with Docker when the command fails to execute
+- Language updates

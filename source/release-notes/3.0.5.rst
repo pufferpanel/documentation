@@ -1,4 +1,4 @@
-v3.0.4
+v3.0.5
 ======
 
 - Revert sh instead of bash usage. This caused issues with signals not being
