@@ -1,0 +1,6 @@
+v3.0.8
+======
+
+- Disable symlink generation from compressed files. 
+  Due to multiple security issues with this, we have disabled symlinks from 
+  being created when they are contained from a compressed file.
