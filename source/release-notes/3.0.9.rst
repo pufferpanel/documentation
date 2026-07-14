@@ -1,0 +1,10 @@
+v3.0.9
+======
+
+- Enable limited symlink usage
+- Correct missing translation for a server running error
+- Update swagger documents
+- Add support to skip restarts when stopping a server. Killing a server will not restart a server.
+- Update CurseForge integration to send API key when downloading from CDN
+- Add toggle to force delete a server. This skips the node however, so files will NOT be deleted.
+
