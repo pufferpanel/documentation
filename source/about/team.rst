@@ -6,7 +6,7 @@ The Development Team
 
    Interested in being a part of the PufferPanel team? Have experience with Go, HTML5/CSS3, or just good at helping users? We would love to work with you, please contact us on Discord.
 
-PufferPanel started out as a custom solution for a small Minecraft Host, but quickly evolved into the open source community that is is today. That would not have been possible without the help from our team of developers and contributors.
+PufferPanel started out as a custom solution for a small Minecraft Host, but quickly evolved into the open source community that it is today. That would not have been possible without the help from our team of developers and contributors.
 
 +----------------------------------------------------------------+------------------------------------------------------------------------+-------------------+
 | .. image::                                                     | puffrfish                                                              | Founder           |
